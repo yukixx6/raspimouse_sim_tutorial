@@ -39,7 +39,23 @@ Quick Start
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
+   :caption: ROS Indigo
+   
+   ./how_to_install_ros_indigo.md
+
+
+.. toctree::
+   :maxdepth: 2
+   :caption: ROS Kinetic
+   
+   ./how_to_install_ros_kinetic.md
+
+
+.. toctree::
+   :maxdepth: 2
+   :caption: ROS Melodic
+   
+   ./how_to_install_ros_melodic.md
 
    
 
