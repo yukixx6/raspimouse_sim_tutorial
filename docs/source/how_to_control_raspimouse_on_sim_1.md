@@ -4,16 +4,16 @@
 
 シミュレータ上のラズパイマウスを動かす方法を複数回に分けて紹介していきます。
 
-1. [距離センサの値の読み取り方](how_to_control_raspimouse_on_sim_1.html) ← 今ここ
-2. [モータを動かし方](how_to_control_raspimouse_on_sim_2.html)
-3. [キーボードを用いたラズパイマウスの動かし方](how_to_control_raspimouse_on_sim_3.html)
-4. [コントローラを用いたラズパイマウスの動かし方](how_to_control_raspimouse_on_sim_4.html)
+1. [距離センサの値の読み取り方](how_to_control_raspimouse_on_sim_1.md) ← 今ここ
+2. [モータを動かし方](how_to_control_raspimouse_on_sim_2.md)
+3. [キーボードを用いたラズパイマウスの動かし方](how_to_control_raspimouse_on_sim_3.md)
+4. [コントローラを用いたラズパイマウスの動かし方](how_to_control_raspimouse_on_sim_4.md)
 
 ラズパイマウスには距離センサが4つ付いています。この距離センサよりセンサ値を得ることができます。  
 Part1では距離センサを使ってロボットと壁との距離を計測してみます。
 
 ## 距離センサから値を読み取る
-まず、[Raspberry Pi Mouse Simulatorの動作確認](how_to_use_raspimouse_sim.html)に従い、Gazeboを起動します。
+まず、[Raspberry Pi Mouse Simulatorの動作確認](how_to_use_raspimouse_sim.md)に従い、Gazeboを起動します。
 
 Gazeboが起動したら、2枚目のウィンドウで以下のコマンドを入力します。
 
@@ -39,7 +39,7 @@ cat /dev/rtlightsensor0
 描画が間に合っていない場合、Gazebo上のロボットの動きが鈍く見えます。  
 陰を描画しないようにすることでほとんどの場合は動作が改善します。
 
-詳しくは[ROSトラブルシューティング](troubleshooting.html)をご覧ください。
+詳しくは[ROSトラブルシューティング](troubleshooting.md)をご覧ください。
 
 ### rtlightsensorについてのエラー
 
@@ -49,4 +49,4 @@ cat /dev/rtlightsensor0
 
 上記のエラーが繰り返し出る場合、デバイスファイルが無いことがあります。
 
-[ROSトラブルシューティング](troubleshooting.html)をご覧ください。
+[ROSトラブルシューティング](troubleshooting.md)をご覧ください。

@@ -2,15 +2,15 @@
 
 ## ラズパイマウスを動かすまでの流れ
 
-1. [距離センサの値の読み取り方](how_to_control_raspimouse_on_sim_1.html)
-2. [モータを動かし方](how_to_control_raspimouse_on_sim_2.html) ← 今ここ
-3. [キーボードを用いたラズパイマウスの動かし方](how_to_control_raspimouse_on_sim_3.html)
-4. [コントローラを用いたラズパイマウスの動かし方](how_to_control_raspimouse_on_sim_4.html)
+1. [距離センサの値の読み取り方](how_to_control_raspimouse_on_sim_1.md)
+2. [モータを動かし方](how_to_control_raspimouse_on_sim_2.md) ← 今ここ
+3. [キーボードを用いたラズパイマウスの動かし方](how_to_control_raspimouse_on_sim_3.md)
+4. [コントローラを用いたラズパイマウスの動かし方](how_to_control_raspimouse_on_sim_4.md)
 
 ラズパイマウスにはモータが2つあります。このモータに信号を送り、ロボットを動かすことができます。  
 Part2ではモータの動かし方について取り扱います。
 
-まず、Part1と同様に[Raspberry Pi Mouse Simulatorの動作確認](how_to_use_raspimouse_sim.html)に従い、Gazeboを起動します。
+まず、Part1と同様に[Raspberry Pi Mouse Simulatorの動作確認](how_to_use_raspimouse_sim.md)に従い、Gazeboを起動します。
 
 ## モータの通電
 
@@ -58,7 +58,7 @@ echo -200 > /dev/rtmotor_raw_r0
 描画が間に合っていない場合、Gazebo上のロボットの動きが鈍く見えます。  
 陰を描画しないようにすることでほとんどの場合は動作が改善します。
 
-詳しくは[ROSトラブルシューティング](troubleshooting.html)をご覧ください。
+詳しくは[ROSトラブルシューティング](troubleshooting.md)をご覧ください。
 
 ### rtlightsensorについてのエラー
 
@@ -68,4 +68,4 @@ echo -200 > /dev/rtmotor_raw_r0
 
 上記のエラーが繰り返し出る場合、デバイスファイルが無いことがあります。
 
-[ROSトラブルシューティング](troubleshooting.html)をご覧ください。
+[ROSトラブルシューティング](troubleshooting.md)をご覧ください。

@@ -20,7 +20,7 @@ Gazebo上でRaspberry Pi Mouseをシミュレートできるようにするた�
   * ROS Melodic
   * Gazebo 9.x (ROSとともにインストール)
 
-ROSのインストールが完了していない場合は[ROSのインストール方法](how_to_install_ros_kinetic.html)をご覧ください。
+ROSのインストールが完了していない場合は[ROSのインストール方法](how_to_install_ros_kinetic.md)をご覧ください。
 
 ## 手順
 

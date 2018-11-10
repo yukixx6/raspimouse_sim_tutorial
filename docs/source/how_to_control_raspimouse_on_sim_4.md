@@ -2,10 +2,10 @@
 
 ## ラズパイマウスを動かすまでの流れ
 
-1. [距離センサの値の読み取り方](how_to_control_raspimouse_on_sim_1.html)
-2. [モータを動かし方](how_to_control_raspimouse_on_sim_2.html)
-3. [キーボードを用いたラズパイマウスの動かし方](how_to_control_raspimouse_on_sim_3.html)
-4. [コントローラを用いたラズパイマウスの動かし方](how_to_control_raspimouse_on_sim_4.html) ← 今ここ
+1. [距離センサの値の読み取り方](how_to_control_raspimouse_on_sim_1.md)
+2. [モータを動かし方](how_to_control_raspimouse_on_sim_2.md)
+3. [キーボードを用いたラズパイマウスの動かし方](how_to_control_raspimouse_on_sim_3.md)
+4. [コントローラを用いたラズパイマウスの動かし方](how_to_control_raspimouse_on_sim_4.md) ← 今ここ
 
 part4ではコントローラを用いてシミュレータ上のラズパイマウスを動かす方法を紹介します。
 
@@ -33,7 +33,7 @@ sudo apt install ros-kinetic-joy
 
 詳しくは[`raspimouse_game_controller`](https://github.com/zaki0929/raspimouse_game_controller)の[README](https://github.com/zaki0929/raspimouse_game_controller/blob/master/README.md)をご覧下さい。
 
-まず、前回と同様に[Raspberry Pi Mouse Simulatorの動作確認](how_to_use_raspimouse_sim.html)に従い、Gazeboを起動します。
+まず、前回と同様に[Raspberry Pi Mouse Simulatorの動作確認](how_to_use_raspimouse_sim.md)に従い、Gazeboを起動します。
 
 別のターミナルで、以下のコマンドを実行します。
 
@@ -43,7 +43,7 @@ sudo apt install ros-kinetic-joy
 roslaunch raspimouse_gamepad_control run_with_base_nodes.launch
 ```
 
-次に、コントローラの上のスイッチが**D**の方に傾いていて、MODEのランプが**付いている**ことを確認します。
+次に、コントローラの上のスイッチが**D**の方にセットされ、MODEのランプが**付いている**ことを確認します。
 
 ![](./images/logicool_controller_mode_sw.jpg)
 
