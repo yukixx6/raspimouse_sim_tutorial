@@ -1,16 +1,16 @@
-# ROSのインストール方法(Ubuntu Trusty)
+# ROS Indigoのインストール方法\(Ubuntu Trusty\)
 
-__Ubuntu 16.04を使用している場合は[ROSのインストール方法(Ubuntu Xenial)](how_to_install_ros_kinetic.html)をご覧ください。__  
-__Ubuntu 18.04を使用している場合は[ROSのインストール方法(Ubuntu Bionic)](how_to_install_ros_melodic.html)をご覧ください。__
+**Ubuntu 16.04を使用している場合は**[**ROSのインストール方法\(Ubuntu Xenial\)**](how_to_install_ros_kinetic.md)**をご覧ください。**  
+**Ubuntu 18.04を使用している場合は**[**ROSのインストール方法\(Ubuntu Bionic\)**](how_to_install_ros_melodic.md)**をご覧ください。**
 
 ## 概要
 
 Gazebo上でRaspberry Pi Mouseをシミュレートできるようにするため、以下のソフトウェアをインストールします。
 
 * ROS Indigo
-* Gazebo 2.x (ROSとともにインストール)
+* Gazebo 2.x \(ROSとともにインストール\)
 
-ROSがすでにインストール済みの場合はこのページを飛ばして[Raspberry Pi Mouse Simulatorのインストール](how_to_install_simulator_trusty.html)を行ってください。
+ROSがすでにインストール済みの場合はこのページを飛ばしてRaspberry Pi Mouse Simulatorのインストールを行ってください。
 
 ### 動作確認済み環境
 
@@ -18,15 +18,15 @@ ROSがすでにインストール済みの場合はこのページを飛ばし�
 
 ## 手順
 
-[Tiryoh/ros_setup_scripts_Ubuntu14.04_desktop](https://github.com/Tiryoh/ros_setup_scripts_Ubuntu14.04_desktop)を使用してインストール作業を進めていきます。
+[Tiryoh/ros\_setup\_scripts\_Ubuntu14.04\_desktop](https://github.com/Tiryoh/ros_setup_scripts_Ubuntu14.04_desktop)を使用してインストール作業を進めていきます。
 
 1. ROSをインストール
-1. `catkin_ws`を準備
+2. `catkin_ws`を準備
 
 必要なコマンドをまとめると、以下のようになります。  
 これらのコマンドについてこの後細かく説明していきます。
 
-```
+```text
 sudo apt-get update
 sudo apt-get install -y curl
 bash -c "$(curl -SsfL https://git.io/ros-indigo-desktop)"
@@ -42,18 +42,18 @@ catkin_make && source ~/catkin_ws/devel/setup.bash
 
 ### ROSのインストール
 
-今回はROSのインストールに[Tiryoh/ros_setup_scripts_Ubuntu14.04_desktop](https://github.com/Tiryoh/ros_setup_scripts_Ubuntu14.04_desktop)を使用します。
+今回はROSのインストールに[Tiryoh/ros\_setup\_scripts\_Ubuntu14.04\_desktop](https://github.com/Tiryoh/ros_setup_scripts_Ubuntu14.04_desktop)を使用します。
 
-インストーラを使用するに当たり、まずは以下のコマンドでパッケージマネージャ(apt)のパッケージリストを最新版にし、curlをインストールします。1行ずつ実行してください。
+インストーラを使用するに当たり、まずは以下のコマンドでパッケージマネージャ\(apt\)のパッケージリストを最新版にし、curlをインストールします。1行ずつ実行してください。
 
-```
+```text
 sudo apt-get update
 sudo apt-get install -y curl
 ```
 
 次にインストーラを実行します。
 
-```
+```text
 bash -c "$(curl -SsfL https://git.io/ros-indigo-desktop)"
 ```
 
@@ -63,7 +63,7 @@ bash -c "$(curl -SsfL https://git.io/ros-indigo-desktop)"
 
 最終的に以下のログが出ていればインストール成功です。
 
-```
+```text
 ***INSTRUCTION*****************
 * do the following command    *
 * $ source ~/.bashrc          *
@@ -74,12 +74,11 @@ bash -c "$(curl -SsfL https://git.io/ros-indigo-desktop)"
 
 ROSのインストールについて詳しく調べたい場合は[ROS Wiki](http://wiki.ros.org/indigo/Installation/Ubuntu)をご覧ください。
 
-
 ### `catkin_ws`の準備
 
 ROSのパッケージを保存するためのワークスペースを用意します。1行ずつ実行してください。
 
-```
+```text
 source ~/.bashrc
 mkdir -p ~/catkin_ws/src
 cd ~/catkin_ws/
@@ -90,9 +89,9 @@ catkin_make && source ~/catkin_ws/devel/setup.bash
 
 ## Trubleshooting
 
-### catkin_makeに失敗する
+### catkin\_makeに失敗する
 
-```
+```text
 $ catkin_make
 Base path: /home/ubuntu/catkin_ws
 Source space: /home/ubuntu/catkin_ws/src
@@ -107,8 +106,9 @@ Install space: /home/ubuntu/catkin_ws/install
 ####
 ```
 
-上記のようになにもビルドせず、目的のパッケージのcatkin_makeに失敗する場合があります。
+上記のようになにもビルドせず、目的のパッケージのcatkin\_makeに失敗する場合があります。
 
-`setup.bash`を再読み込みしてからcatkin_makeしてみてください。
+`setup.bash`を再読み込みしてからcatkin\_makeしてみてください。
 
-詳しくは[ROSトラブルシューティング](troubleshooting#catkin_make-failed)をご覧ください。
+詳しくは[ROSトラブルシューティング](https://github.com/yukixx6/raspimouse_sim_tutorial/tree/7c9122da47fbadaecd28e305f94195df25a8a7ba/docs/source/troubleshooting/README.md#catkin_make-failed)をご覧ください。
+
