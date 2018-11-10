@@ -1,7 +1,7 @@
 # ROS Indigoのインストール方法\(Ubuntu Trusty\)
 
-**Ubuntu 16.04を使用している場合は**[**ROSのインストール方法\(Ubuntu Xenial\)**](https://github.com/yukixx6/raspimouse_sim_tutorial/tree/7c9122da47fbadaecd28e305f94195df25a8a7ba/docs/source/how_to_install_ros_kinetic.html)**をご覧ください。**  
-**Ubuntu 18.04を使用している場合は**[**ROSのインストール方法\(Ubuntu Bionic\)**](https://github.com/yukixx6/raspimouse_sim_tutorial/tree/7c9122da47fbadaecd28e305f94195df25a8a7ba/docs/source/how_to_install_ros_melodic.html)**をご覧ください。**
+**Ubuntu 16.04を使用している場合は**[**ROSのインストール方法\(Ubuntu Xenial\)**](how_to_install_ros_kinetic.md)**をご覧ください。**  
+**Ubuntu 18.04を使用している場合は**[**ROSのインストール方法\(Ubuntu Bionic\)**](how_to_install_ros_melodic.md)**をご覧ください。**
 
 ## 概要
 
@@ -10,7 +10,7 @@ Gazebo上でRaspberry Pi Mouseをシミュレートできるようにするた�
 * ROS Indigo
 * Gazebo 2.x \(ROSとともにインストール\)
 
-ROSがすでにインストール済みの場合はこのページを飛ばして[Raspberry Pi Mouse Simulatorのインストール](https://github.com/yukixx6/raspimouse_sim_tutorial/tree/7c9122da47fbadaecd28e305f94195df25a8a7ba/docs/source/how_to_install_simulator_trusty.html)を行ってください。
+ROSがすでにインストール済みの場合はこのページを飛ばしてRaspberry Pi Mouse Simulatorのインストールを行ってください。
 
 ### 動作確認済み環境
 
