@@ -6,7 +6,7 @@
 
 Raspberry Pi MouseやROSに親しみがない人も興味を持って取り組めるような構成にしていきます。
 
-_このオンラインチュートリアルは執筆中です。完成版ではありません。_
+_このオンラインチュートリアルは現在執筆中です。完成版ではありません。_
 
 ## Raspberry Pi Mouse Simulatorとは
 
@@ -15,25 +15,24 @@ Raspberry Pi Mouse SimulatorはメインボードにRaspberry Piを使った左�
 ### 関連ページ
 
 * Raspberry Pi Mouse 公式メーカーページ
-  * [Raspberry Pi Mouse \| RT MicroMouse](https://products.rt-net.jp/micromouse/raspberry-pi-mouse)
+  * [Raspberry Pi Mouse | 製品情報 | 株式会社ア－ルティ](https://www.rt-net.jp/products/raspimouse2/)
 * ROS wiki
   * [raspimouse\_sim - ROS Wiki](http://wiki.ros.org/raspimouse_sim)
+  * [rt-net/raspimouse_sim - GitHub repository](https://github.com/rt-net/raspimouse_sim)
 
-### Quick Start
+## セットアップ
 
-* [Quick Start](https://github.com/rt-net/raspimouse_sim/wiki/quickstart)
+### ROSのインストール
+  * [ROS Indigoのインストール方法\(Ubuntu Trusty\)](docs/source/how_to_install_ros_indigo.md)
+  * [ROS Kineticのインストール方法\(Ubuntu Xenial\)](docs/source/how_to_install_ros_kinetic.md)
+  * [ROS Melodicのインストール方法\(Ubuntu Bionic\)](docs/source/how_to_install_ros_melodic.md)
 
-## ROSのインストール方法
+### シミュレータのインストール
+  * [Raspberry Pi Mouse Simulatorのインストール方法](docs/source/how_to_install_simulator.md)
+  * [Raspberry Pi Mouse Simulatorの動作確認](docs/source/how_to_use_raspimouse_sim.md)
 
-### ROS Indigo
-
-* [ROS Indigoのインストール方法\(Ubuntu Trusty\)](rosnoinsutru/how_to_install_ros_indigo.md)
-
-### ROS Kinetic
-
-* [ROS Kineticのインストール方法\(Ubuntu Xenial\)](rosnoinsutru/how_to_install_ros_kinetic.md)
-
-### ROS Melodic
-
-* [ROSのインストール方法\(Ubuntu Bionic\)](rosnoinsutru/how_to_install_ros_melodic.md)
-
+## シミュレータのチュートリアル
+  * [シミュレータ上のラズパイマウスを動かす方法 Part1](docs/source/how_to_control_raspimouse_on_sim_1.md)
+  * [シミュレータ上のラズパイマウスを動かす方法 Part2](docs/source/how_to_control_raspimouse_on_sim_2.md)
+  * [シミュレータ上のラズパイマウスを動かす方法 Part3](docs/source/how_to_control_raspimouse_on_sim_3.md)
+  * [シミュレータ上のラズパイマウスを動かす方法 Part4](docs/source/how_to_control_raspimouse_on_sim_4.md)

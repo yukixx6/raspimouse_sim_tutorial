@@ -1,16 +1,16 @@
-# ROS Melodicのインストール方法\(Ubuntu Bionic\)
+# ROS Kineticのインストール方法\(Ubuntu Xenial\)
 
-**Ubuntu 14.04を使用している場合は**[**ROSのインストール方法\(Ubuntu Trusty\)**](https://github.com/yukixx6/raspimouse_sim_tutorial/tree/7c9122da47fbadaecd28e305f94195df25a8a7ba/docs/source/how_to_install_ros_indigo.html)**をご覧ください。**  
-**Ubuntu 16.04を使用している場合は**[**ROSのインストール方法\(Ubuntu Xenial\)**](https://github.com/yukixx6/raspimouse_sim_tutorial/tree/7c9122da47fbadaecd28e305f94195df25a8a7ba/docs/source/how_to_install_ros_kinetic.html)**をご覧ください。**
+**Ubuntu 14.04を使用している場合は**[**ROSのインストール方法\(Ubuntu Trusty\)**](how_to_install_ros_indigo.md)**をご覧ください。**  
+**Ubuntu 18.04を使用している場合は**[**ROSのインストール方法\(Ubuntu Bionic\)**](how_to_install_ros_melodic.md)**をご覧ください。**
 
 ## 概要
 
 Gazebo上でRaspberry Pi Mouseをシミュレートできるようにするため、以下のソフトウェアをインストールします。
 
-* ROS Melodic
-* Gazebo 9.x \(ROSとともにインストール\)
+* ROS Kinetic
+* Gazebo 7.x \(ROSとともにインストール\)
 
-ROSがすでにインストール済みの場合はこのページを飛ばして[Raspberry Pi Mouse Simulatorのインストール](https://github.com/yukixx6/raspimouse_sim_tutorial/tree/7c9122da47fbadaecd28e305f94195df25a8a7ba/docs/source/how_to_install_simulator_bionic.html)を行ってください。
+ROSがすでにインストール済みの場合はこのページを飛ばして[Raspberry Pi Mouse Simulatorのインストール](how_to_install_simulator.md)を行ってください。
 
 ### 動作確認済み環境
 
@@ -18,7 +18,7 @@ ROSがすでにインストール済みの場合はこのページを飛ばし�
 
 ## 手順
 
-[ryuichiueda/ros\_setup\_scripts\_Ubuntu18.04\_desktop](https://github.com/ryuichiueda/ros_setup_scripts_Ubuntu18.04_desktop)を使用してインストール作業を進めていきます。
+[ryuichiueda/ros\_setup\_scripts\_Ubuntu16.04\_desktop](https://github.com/ryuichiueda/ros_setup_scripts_Ubuntu16.04_desktop)を使用してインストール作業を進めていきます。
 
 1. ROSをインストール
 2. `catkin_ws`を準備
@@ -29,7 +29,7 @@ ROSがすでにインストール済みの場合はこのページを飛ばし�
 ```text
 sudo apt-get update
 sudo apt-get install -y curl
-bash -c "$(curl -SsfL https://git.io/ros-melodic-desktop)"
+bash -c "$(curl -SsfL https://git.io/ros-kinetic-desktop)"
 source ~/.bashrc
 mkdir -p ~/catkin_ws/src
 cd ~/catkin_ws/
@@ -42,7 +42,7 @@ catkin_make && source ~/catkin_ws/devel/setup.bash
 
 ### ROSのインストール
 
-今回はROSのインストールに[ryuichiueda/ros\_setup\_scripts\_Ubuntu18.04\_desktop](https://github.com/ryuichiueda/ros_setup_scripts_Ubuntu18.04_desktop)を使用します。
+今回はROSのインストールに[ryuichiueda/ros\_setup\_scripts\_Ubuntu16.04\_desktop](https://github.com/ryuichiueda/ros_setup_scripts_Ubuntu16.04_desktop)を使用します。
 
 インストーラを使用するに当たり、まずは以下のコマンドでパッケージマネージャ\(apt\)のパッケージリストを最新版にし、curlをインストールします。1行ずつ実行してください。
 
@@ -54,12 +54,12 @@ sudo apt-get install -y curl
 次にインストーラを実行します。
 
 ```text
-bash -c "$(curl -SsfL https://git.io/ros-melodic-desktop)"
+bash -c "$(curl -SsfL https://git.io/ros-kinetic-desktop)"
 ```
 
 このインストーラを使ってapt-getでインストールするパッケージは以下の通りです。
 
-* ros-melodic-desktop-full
+* ros-kinetic-desktop-full
 
 最終的に以下のログが出ていればインストール成功です。
 
@@ -72,7 +72,7 @@ bash -c "$(curl -SsfL https://git.io/ros-melodic-desktop)"
 *******************************
 ```
 
-ROSのインストールについて詳しく調べたい場合は[ROS Wiki](http://wiki.ros.org/melodic/Installation/Ubuntu)をご覧ください。
+ROSのインストールについて詳しく調べたい場合は[ROS Wiki](http://wiki.ros.org/kinetic/Installation/Ubuntu)をご覧ください。
 
 ### `catkin_ws`の準備
 
@@ -110,5 +110,5 @@ Install space: /home/ubuntu/catkin_ws/install
 
 `setup.bash`を再読み込みしてからcatkin\_makeしてみてください。
 
-詳しくは[ROSトラブルシューティング](https://github.com/yukixx6/raspimouse_sim_tutorial/tree/7c9122da47fbadaecd28e305f94195df25a8a7ba/docs/source/troubleshooting.html#catkin_make-failed)をご覧ください。
+詳しくは[ROSトラブルシューティング](troubleshooting.md)をご覧ください。
 
