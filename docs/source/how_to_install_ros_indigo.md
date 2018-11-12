@@ -10,7 +10,7 @@ Gazebo上でRaspberry Pi Mouseをシミュレートできるようにするた�
 * ROS Indigo
 * Gazebo 2.x \(ROSとともにインストール\)
 
-ROSがすでにインストール済みの場合はこのページを飛ばしてRaspberry Pi Mouse Simulatorのインストールを行ってください。
+ROSがすでにインストール済みの場合はこのページを飛ばして[Raspberry Pi Mouse Simulatorのインストール](how_to_install_simulator.md)を行ってください。
 
 ### 動作確認済み環境
 
@@ -110,5 +110,5 @@ Install space: /home/ubuntu/catkin_ws/install
 
 `setup.bash`を再読み込みしてからcatkin\_makeしてみてください。
 
-詳しくは[ROSトラブルシューティング](https://github.com/yukixx6/raspimouse_sim_tutorial/tree/7c9122da47fbadaecd28e305f94195df25a8a7ba/docs/source/troubleshooting/README.md#catkin_make-failed)をご覧ください。
+詳しくは[ROSトラブルシューティング](troubleshooting.md)をご覧ください。
 
