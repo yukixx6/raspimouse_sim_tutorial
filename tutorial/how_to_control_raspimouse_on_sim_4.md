@@ -7,7 +7,7 @@
 3. [キーボードを用いたラズパイマウスの動かし方](how_to_control_raspimouse_on_sim_3.md)
 4. [コントローラを用いたラズパイマウスの動かし方](how_to_control_raspimouse_on_sim_4.md) ← 今ここ
 
-part4ではコントローラを用いてシミュレータ上のラズパイマウスを動かす方法を紹介します。
+Part4ではコントローラを用いてシミュレータ上のラズパイマウスを動かす方法を紹介します。
 
 コントローラを用いることにより、キーボードで操作するより自由に操作することができます。
 
@@ -47,13 +47,13 @@ roslaunch raspimouse_gamepad_control run_with_base_nodes.launch
 
 次に、コントローラの上のスイッチが**D**の方にセットされ、MODEのランプが**付いている**ことを確認します。
 
-![](https://github.com/yukixx6/raspimouse_sim_tutorial/tree/7041ca2f8b06749c8dcadd9ac1d69bc4e7277dc4/docs/source/images/logicool_controller_mode_sw.jpg)
+![](../docs/source/images/logicool_controller_mode_sw.jpg)
 
 操作するときは**X**を押しながら、左の**十字キー**を押します。 ![](../.gitbook/assets/logicool_how_to_use.jpg)
 
 ## コントローラを使用している様子：
 
-![](https://github.com/yukixx6/raspimouse_sim_tutorial/tree/7041ca2f8b06749c8dcadd9ac1d69bc4e7277dc4/docs/source/images/raspimouse_sim_demo.gif)
+![](../docs/source/images/raspimouse_sim_demo.gif)
 
 ## Trubleshooting
 
