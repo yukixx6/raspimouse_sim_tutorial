@@ -10,7 +10,7 @@
 ラズパイマウスにはモータが2つあります。このモータに信号を送り、ロボットを動かすことができます。  
 Part2ではモータの動かし方について取り扱います。
 
-まず、Part1と同様に[Raspberry Pi Mouse Simulatorの動作確認](how_to_use_raspimouse_sim.md)に従い、Gazeboを起動します。
+まず、Part1と同様に[Raspberry Pi Mouse Simulatorの動作確認](../setup/how_to_use_raspimouse_sim.md)に従い、Gazeboを起動します。
 
 ## モータの通電
 
@@ -24,22 +24,20 @@ Part2ではモータの動かし方について取り扱います。
 
 次の操作で通電させることができます。
 
-```
+```text
 echo 1 > /dev/rtmotoren0
 ```
 
 モータが通電した場合、実機では特に音はなりませんが、シミュレータではわかりやすくするため**ピコ**という音がなります。  
 （効果音は[効果音ラボ](https://soundeffect-lab.info/)さんからお借りしました。）
 
-
-![](./images/echo_rtmotoren0.png)
-
+![](../.gitbook/assets/echo_rtmotoren0.png)
 
 ## ラズパイマウスを動かす
 
 ROSを介さずシミュレータ上のラズパイマウスを動かすことができます。
 
-```
+```text
 echo 200 > /dev/rtmotor_raw_l0
 echo -200 > /dev/rtmotor_raw_r0
 ```
@@ -48,8 +46,7 @@ echo -200 > /dev/rtmotor_raw_r0
 
 2行目は右モータに逆方向に200Hz与えています。
 
-2行目まで実行したとき、ラズパイマウスがその場で回転していたら正しく実行できています。
-![](./images/echo_rtmotor_raw_n.png)
+2行目まで実行したとき、ラズパイマウスがその場で回転していたら正しく実行できています。 ![](../.gitbook/assets/echo_rtmotor_raw_n.png)
 
 ## Trubleshooting
 
@@ -58,14 +55,15 @@ echo -200 > /dev/rtmotor_raw_r0
 描画が間に合っていない場合、Gazebo上のロボットの動きが鈍く見えます。  
 陰を描画しないようにすることでほとんどの場合は動作が改善します。
 
-詳しくは[ROSトラブルシューティング](troubleshooting.md)をご覧ください。
+詳しくは[ROSトラブルシューティング](https://github.com/yukixx6/raspimouse_sim_tutorial/tree/7041ca2f8b06749c8dcadd9ac1d69bc4e7277dc4/docs/source/troubleshooting.md)をご覧ください。
 
 ### rtlightsensorについてのエラー
 
-```
+```text
 [ERROR] [1515648685.827463, 0.414000]: failed to open rtlightsensor0
 ```
 
 上記のエラーが繰り返し出る場合、デバイスファイルが無いことがあります。
 
-[ROSトラブルシューティング](troubleshooting.md)をご覧ください。
+[ROSトラブルシューティング](https://github.com/yukixx6/raspimouse_sim_tutorial/tree/7041ca2f8b06749c8dcadd9ac1d69bc4e7277dc4/docs/source/troubleshooting.md)をご覧ください。
+

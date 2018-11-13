@@ -15,27 +15,32 @@ Raspberry Pi Mouse SimulatorはメインボードにRaspberry Piを使った左�
 ### 関連ページ
 
 * Raspberry Pi Mouse 公式メーカーページ
-  * [Raspberry Pi Mouse | 製品情報 | 株式会社ア－ルティ](https://www.rt-net.jp/products/raspimouse2/)
+  * [Raspberry Pi Mouse \| 製品情報 \| 株式会社ア－ルティ](https://www.rt-net.jp/products/raspimouse2/)
 * ROS wiki
   * [raspimouse\_sim - ROS Wiki](http://wiki.ros.org/raspimouse_sim)
-  * [rt-net/raspimouse_sim - GitHub repository](https://github.com/rt-net/raspimouse_sim)
+  * [rt-net/raspimouse\_sim - GitHub repository](https://github.com/rt-net/raspimouse_sim)
 
 ## セットアップ
 
 ### ROSのインストール
-  * [ROS Indigoのインストール方法\(Ubuntu Trusty\)](docs/source/how_to_install_ros_indigo.md)
-  * [ROS Kineticのインストール方法\(Ubuntu Xenial\)](docs/source/how_to_install_ros_kinetic.md)
-  * [ROS Melodicのインストール方法\(Ubuntu Bionic\)](docs/source/how_to_install_ros_melodic.md)
+
+* [ROS Indigoのインストール方法\(Ubuntu Trusty\)](setup/how_to_install_ros_indigo.md)
+* [ROS Kineticのインストール方法\(Ubuntu Xenial\)](setup/how_to_install_ros_kinetic.md)
+* [ROS Melodicのインストール方法\(Ubuntu Bionic\)](setup/how_to_install_ros_melodic.md)
 
 ### シミュレータのインストール
-  * [Raspberry Pi Mouse Simulatorのインストール方法](docs/source/how_to_install_simulator.md)
-  * [Raspberry Pi Mouse Simulatorの動作確認](docs/source/how_to_use_raspimouse_sim.md)
+
+* [Raspberry Pi Mouse Simulatorのインストール方法](setup/how_to_install_simulator.md)
+* [Raspberry Pi Mouse Simulatorの動作確認](setup/how_to_use_raspimouse_sim.md)
 
 ## シミュレータのチュートリアル
-  * [シミュレータ上のラズパイマウスを動かす方法 Part1](docs/source/how_to_control_raspimouse_on_sim_1.md)
-  * [シミュレータ上のラズパイマウスを動かす方法 Part2](docs/source/how_to_control_raspimouse_on_sim_2.md)
-  * [シミュレータ上のラズパイマウスを動かす方法 Part3](docs/source/how_to_control_raspimouse_on_sim_3.md)
-  * [シミュレータ上のラズパイマウスを動かす方法 Part4](docs/source/how_to_control_raspimouse_on_sim_4.md)
+
+* [シミュレータ上のラズパイマウスを動かす方法 Part1](tutorial/how_to_control_raspimouse_on_sim_1.md)
+* [シミュレータ上のラズパイマウスを動かす方法 Part2](tutorial/how_to_control_raspimouse_on_sim_2.md)
+* [シミュレータ上のラズパイマウスを動かす方法 Part3](tutorial/how_to_control_raspimouse_on_sim_3.md)
+* [シミュレータ上のラズパイマウスを動かす方法 Part4](tutorial/how_to_control_raspimouse_on_sim_4.md)
 
 ## トラブルシューティング
-* [ROSのトラブルシューティング](docs/source/troubleshooting.md)
+
+* [ROSのトラブルシューティング](troubleshooting.md)
+

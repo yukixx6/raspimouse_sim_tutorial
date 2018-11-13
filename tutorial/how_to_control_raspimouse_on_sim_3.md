@@ -12,25 +12,26 @@ Part3ではキーボードを用いてシミュレータ上のラズパイマウ
 キーボードを用いてゲーム感覚で操作できます。
 
 ## キーボードでラズパイマウスを動かす
-まず、前回と同様に[Raspberry Pi Mouse Simulatorの起動](how_to_use_raspimouse_sim)に従い、Gazeboを起動します。
+
+まず、前回と同様に[Raspberry Pi Mouse Simulatorの起動](https://github.com/yukixx6/raspimouse_sim_tutorial/tree/7041ca2f8b06749c8dcadd9ac1d69bc4e7277dc4/docs/source/how_to_use_raspimouse_sim/README.md)に従い、Gazeboを起動します。
 
 `raspimouse_control` の `scripts` ディレクトリの中にある [`controller_vel_publisher.py`](https://github.com/rt-net/raspimouse_sim/blob/kinetic-devel/raspimouse_control/scripts/controller_vel_publisher.py) を使用します。
 
 別のターミナルで以下のコマンドを実行します。
 
-```
+```text
 rosrun raspimouse_control controller_vel_publisher.py
 ```
 
 すると次のようにキー入力待機状態になります。
 
-```
+```text
 w: forward, s: backward, a: left, d: right >
 ```
 
 よくあるゲームの移動方法と同じで `w` で前進、 `s` で後退、 `a` で左へ超信地旋回、 `d` で右へ超信地旋回できます。
 
-![](./images/telop-keyboard.png)
+![](../.gitbook/assets/telop-keyboard.png)
 
 ## Trubleshooting
 
@@ -39,24 +40,25 @@ w: forward, s: backward, a: left, d: right >
 描画が間に合っていない場合、Gazebo上のロボットの動きが鈍く見えます。  
 陰を描画しないようにすることでほとんどの場合は動作が改善します。
 
-詳しくは[ROSトラブルシューティング](troubleshooting.md)をご覧ください。
+詳しくは[ROSトラブルシューティング](https://github.com/yukixx6/raspimouse_sim_tutorial/tree/7041ca2f8b06749c8dcadd9ac1d69bc4e7277dc4/docs/source/troubleshooting.md)をご覧ください。
 
 ### rtlightsensorについてのエラー
 
-```
+```text
 [ERROR] [1515648685.827463, 0.414000]: failed to open rtlightsensor0
 ```
 
 上記のエラーが繰り返し出る場合、デバイスファイルが無いことがあります。
 
-[ROSトラブルシューティング](troubleshooting.md)をご覧ください。
+[ROSトラブルシューティング](https://github.com/yukixx6/raspimouse_sim_tutorial/tree/7041ca2f8b06749c8dcadd9ac1d69bc4e7277dc4/docs/source/troubleshooting.md)をご覧ください。
 
-### vel_publisherが起動しない
+### vel\_publisherが起動しない
 
-```
+```text
 Unable to register with master node [http://127.0.0.1:11311]: master may not be running yet. Will keep trying.
 ```
 
 上記のようなメッセージが出て、コマンド入力状態にならないことがあります。
 
-[ROSトラブルシューティング#master-may-not-be-running-yet](trubleshooting-ros#master-may-not-be-running-yet)をご覧ください。
+[ROSトラブルシューティング\#master-may-not-be-running-yet](https://github.com/yukixx6/raspimouse_sim_tutorial/tree/7041ca2f8b06749c8dcadd9ac1d69bc4e7277dc4/docs/source/trubleshooting-ros/README.md#master-may-not-be-running-yet)をご覧ください。
+
