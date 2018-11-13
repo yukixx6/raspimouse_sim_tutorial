@@ -47,13 +47,15 @@ roslaunch raspimouse_gamepad_control run_with_base_nodes.launch
 
 次に、コントローラの上のスイッチが**D**の方にセットされ、MODEのランプが**付いている**ことを確認します。
 
-![](../docs/source/images/logicool_controller_mode_sw.jpg)
+![](../.gitbook/assets/logicool_controller_mode_sw.jpg)
 
-操作するときは**X**を押しながら、左の**十字キー**を押します。 ![](../.gitbook/assets/logicool_how_to_use.jpg)
+操作するときは**X**を押しながら、左の**十字キー**を押します。 
+
+![](../.gitbook/assets/logicool_how_to_use.jpg)
 
 ## コントローラを使用している様子：
 
-![](../docs/source/images/raspimouse_sim_demo.gif)
+![](../.gitbook/assets/raspimouse_sim_demo.gif)
 
 ## Trubleshooting
 
