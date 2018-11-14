@@ -1,7 +1,5 @@
 # Raspberry Pi Mouse Simulatorのインストール方法
 
-GazeboでRaspberry Pi Mouseをシミュレーションするためのセットアップ方法
-
 ## 概要
 
 Gazebo上でRaspberry Pi Mouseをシミュレートできるようにするため、以下のソフトウェアをインストールします。
@@ -28,7 +26,7 @@ ROSのインストールが完了していない場合は[ROSのインストー�
 
 必要なコマンドをまとめると、以下のようになります。 これらのコマンドについてこの後細かく説明していきます。
 
-```text
+```bash
 sudo apt-get update
 sudo apt-get install -y curl
 bash -exv -c "$(curl -SsfL https://git.io/raspimouse-sim-installer)"
@@ -41,20 +39,20 @@ source ~/.bashrc
 
 インストーラを使用するに当たり、まずは以下のコマンドでパッケージマネージャ\(apt\)のパッケージリストを最新版にし、`curl` をインストールします。1行ずつ実行してください。
 
-```text
+```bash
 sudo apt-get update
 sudo apt-get install -y curl
 ```
 
 次にインストーラを実行します。
 
-```text
+```bash
 bash -exv -c "$(curl -SsfL https://git.io/raspimouse-sim-installer)"
 ```
 
 最終的に以下のログが出ていればインストール成功です。
 
-```text
+```bash
 ###HOW TO VERIFY###
 # roslaunch raspimouse_gazebo raspimouse_with_samplemaze.launch
 # rosrun raspimouse_control controller_vel_publisher.py
@@ -64,7 +62,7 @@ bash -exv -c "$(curl -SsfL https://git.io/raspimouse-sim-installer)"
 
 最後に設定を再読み込みしてインストール完了です。
 
-```text
+```bash
 source ~/.bashrc
 ```
 
@@ -72,7 +70,7 @@ source ~/.bashrc
 
 ### catkin\_makeに失敗する
 
-```text
+```bash
 $ catkin_make
 Base path: /home/ubuntu/catkin_ws
 Source space: /home/ubuntu/catkin_ws/src
@@ -87,9 +85,8 @@ Install space: /home/ubuntu/catkin_ws/install
 ####
 ```
 
-上記のようになにもビルドせず、目的のパッケージのcatkin\_makeに失敗する場合があります。
-
+上記のようになにもビルドせず、目的のパッケージのcatkin\_makeに失敗する場合があります。  
 `setup.bash`を再読み込みしてからcatkin\_makeしてみてください。
 
-詳しくは[ROSトラブルシューティング](https://github.com/yukixx6/raspimouse_sim_tutorial/tree/7041ca2f8b06749c8dcadd9ac1d69bc4e7277dc4/docs/source/troubleshooting/README.md#catkin_make-failed)をご覧ください。
+詳しくは[ROSトラブルシューティング](../troubleshooting.md#catkin_make-failed)をご覧ください。
 
