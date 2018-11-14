@@ -26,7 +26,7 @@ ROSがすでにインストール済みの場合はこのページを飛ばし�
 必要なコマンドをまとめると、以下のようになります。  
 これらのコマンドについてこの後細かく説明していきます。
 
-```text
+```bash
 sudo apt-get update
 sudo apt-get install -y curl
 bash -c "$(curl -SsfL https://git.io/ros-indigo-desktop)"
@@ -46,14 +46,14 @@ catkin_make && source ~/catkin_ws/devel/setup.bash
 
 インストーラを使用するに当たり、まずは以下のコマンドでパッケージマネージャ\(apt\)のパッケージリストを最新版にし、curlをインストールします。1行ずつ実行してください。
 
-```text
+```bash
 sudo apt-get update
 sudo apt-get install -y curl
 ```
 
 次にインストーラを実行します。
 
-```text
+```bash
 bash -c "$(curl -SsfL https://git.io/ros-indigo-desktop)"
 ```
 
@@ -78,7 +78,7 @@ ROSのインストールについて詳しく調べたい場合は[ROS Wiki](htt
 
 ROSのパッケージを保存するためのワークスペースを用意します。1行ずつ実行してください。
 
-```text
+```bash
 source ~/.bashrc
 mkdir -p ~/catkin_ws/src
 cd ~/catkin_ws/
@@ -91,7 +91,7 @@ catkin_make && source ~/catkin_ws/devel/setup.bash
 
 ### catkin\_makeに失敗する
 
-```text
+```bash
 $ catkin_make
 Base path: /home/ubuntu/catkin_ws
 Source space: /home/ubuntu/catkin_ws/src
@@ -110,5 +110,5 @@ Install space: /home/ubuntu/catkin_ws/install
 
 `setup.bash`を再読み込みしてからcatkin\_makeしてみてください。
 
-詳しくは[ROSトラブルシューティング](https://github.com/yukixx6/raspimouse_sim_tutorial/tree/7041ca2f8b06749c8dcadd9ac1d69bc4e7277dc4/docs/source/troubleshooting.md)をご覧ください。
+詳しくは[ROSトラブルシューティング](../troubleshooting.md#catkin_make-failed)をご覧ください。
 
