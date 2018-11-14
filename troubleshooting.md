@@ -1,11 +1,11 @@
 # ROSのトラブルシューティング
 
-## Gazebo上のラズパイマウスが動かない
+## Gazebo上のラズパイマウスが動かない <a id="gazebo_not_working"></a>
 
 ros-control関連のパッケージが不足しているとラズパイマウスが動きません。 以下のコマンドで追加パッケージをインストールしてください。
 
 ```bash
-cd ~/catkin_ws/src && rosdep install -r -y -from-paths raspimouse_sim
+cd ~/catkin_ws/src && rosdep install -r -y --from-paths raspimouse_sim
 ```
 
 ## master may not be running yet
@@ -47,15 +47,19 @@ Install space: /home/ubuntu/catkin_ws/install
 source ~/catkin_ws/devel/setup.bash
 ```
 
-## Gazeboの動作がカクカクする/Gazeboのフレームレートが低い
+## Gazeboの動作がカクカクする/Gazeboのフレームレートが低い <a id="gazebo_shadows"></a>
 
 描画が間に合っていない場合、Gazebo上のロボットの動きが鈍く見えます。 陰を描画しないようにすることでほとんどの場合は動作が改善します。
 
-GazeboのWorldにあるsceneをクリックします。 ![](.gitbook/assets/gazebo1.png)
+GazeboのWorldにある`scene`をクリックします。 
 
-次にPropertyにあるshadowsがTrueになっているため、チェックを外しFalseにします。 ![](.gitbook/assets/gazebo2.png)
+![](.gitbook/assets/gazebo1.png)
 
-## rtlightsensorについてのエラーが出る
+次に`Property`にある`shadows`が`True`になっているため、チェックを外し`False`にします。 
+
+![](.gitbook/assets/gazebo2.png)
+
+## rtlightsensorについてのエラーが出る <a id="rtlightsensor_error"></a>
 
 ```bash
 [ERROR] [1515648685.827463, 0.414000]: failed to open rtlightsensor0
