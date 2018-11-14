@@ -22,13 +22,21 @@ Gazeboが起動したら、2枚目のウィンドウで以下のコマンドを�
 cat /dev/rtlightsensor0
 ```
 
-この時、以下の画像のように`37 65 516 36`というバラバラの値が出てきていれば、正常に距離センサが動作しています。 ![](../.gitbook/assets/cat_rtlightsensor0.png)
+この時、以下の画像のように`37 65 516 36`というバラバラの値が出てきていれば、正常に距離センサが動作しています。 
 
-距離センサの値`37 65 516 36`は、左から`① ② ③ ④`とすると、以下の画像のように対応しています。 ![](../.gitbook/assets/raspimouse_sim_lightsensors.png)
+![](../.gitbook/assets/cat_rtlightsensor0.png)
+
+距離センサの値`37 65 516 36`は、左から`① ② ③ ④`とすると、以下の画像のように対応しています。
+
+ 
+
+![](../.gitbook/assets/raspimouse_sim_lightsensors.png)
 
 起動したとき、ラスパイマウスの初期位置は以下の画像のようになっています。
 
-距離センサは対象物との距離が小さいほど値が大きくなります。今回は③番のセンサが左側の壁を感知しているため、一番値が大きくなっています。 ![](../.gitbook/assets/lightsensors_sample.png)
+距離センサは対象物との距離が小さいほど値が大きくなります。今回は③番のセンサが左側の壁を感知しているため、一番値が大きくなっています。 
+
+![](../.gitbook/assets/lightsensors_sample.png)
 
 ## Trubleshooting
 
@@ -37,7 +45,7 @@ cat /dev/rtlightsensor0
 描画が間に合っていない場合、Gazebo上のロボットの動きが鈍く見えます。  
 陰を描画しないようにすることでほとんどの場合は動作が改善します。
 
-詳しくは[ROSトラブルシューティング](https://github.com/yukixx6/raspimouse_sim_tutorial/tree/7041ca2f8b06749c8dcadd9ac1d69bc4e7277dc4/docs/source/troubleshooting.md)をご覧ください。
+詳しくは[ROSトラブルシューティング](../troubleshooting.md#gazebonogakakukakusurugazebonofurmurtogai)をご覧ください。
 
 ### rtlightsensorについてのエラー
 
@@ -47,5 +55,5 @@ cat /dev/rtlightsensor0
 
 上記のエラーが繰り返し出る場合、デバイスファイルが無いことがあります。
 
-[ROSトラブルシューティング](https://github.com/yukixx6/raspimouse_sim_tutorial/tree/7041ca2f8b06749c8dcadd9ac1d69bc4e7277dc4/docs/source/troubleshooting.md)をご覧ください。
+[ROSトラブルシューティング](../troubleshooting.md#rtlightsensornitsuitenoergaru)をご覧ください。
 

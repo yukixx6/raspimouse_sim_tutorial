@@ -40,7 +40,7 @@ w: forward, s: backward, a: left, d: right >
 描画が間に合っていない場合、Gazebo上のロボットの動きが鈍く見えます。  
 陰を描画しないようにすることでほとんどの場合は動作が改善します。
 
-詳しくは[ROSトラブルシューティング](https://github.com/yukixx6/raspimouse_sim_tutorial/tree/7041ca2f8b06749c8dcadd9ac1d69bc4e7277dc4/docs/source/troubleshooting.md)をご覧ください。
+詳しくは[ROSトラブルシューティング](../troubleshooting.md#gazebonogakakukakusurugazebonofurmurtogai)をご覧ください。
 
 ### rtlightsensorについてのエラー
 
@@ -50,7 +50,7 @@ w: forward, s: backward, a: left, d: right >
 
 上記のエラーが繰り返し出る場合、デバイスファイルが無いことがあります。
 
-[ROSトラブルシューティング](https://github.com/yukixx6/raspimouse_sim_tutorial/tree/7041ca2f8b06749c8dcadd9ac1d69bc4e7277dc4/docs/source/troubleshooting.md)をご覧ください。
+[ROSトラブルシューティング](../troubleshooting.md#rtlightsensornitsuitenoergaru)をご覧ください。
 
 ### vel\_publisherが起動しない
 
@@ -60,5 +60,5 @@ Unable to register with master node [http://127.0.0.1:11311]: master may not be 
 
 上記のようなメッセージが出て、コマンド入力状態にならないことがあります。
 
-[ROSトラブルシューティング\#master-may-not-be-running-yet](https://github.com/yukixx6/raspimouse_sim_tutorial/tree/7041ca2f8b06749c8dcadd9ac1d69bc4e7277dc4/docs/source/trubleshooting-ros/README.md#master-may-not-be-running-yet)をご覧ください。
+[ROSトラブルシューティング](../troubleshooting.md#master-may-not-be-running-yet)をご覧ください。
 

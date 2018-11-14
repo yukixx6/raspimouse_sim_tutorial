@@ -46,7 +46,9 @@ echo -200 > /dev/rtmotor_raw_r0
 
 2行目は右モータに逆方向に200Hz与えています。
 
-2行目まで実行したとき、ラズパイマウスがその場で回転していたら正しく実行できています。 ![](../.gitbook/assets/echo_rtmotor_raw_n.png)
+2行目まで実行したとき、ラズパイマウスがその場で回転していたら正しく実行できています。 
+
+![](../.gitbook/assets/echo_rtmotor_raw_n.png)
 
 ## Trubleshooting
 
@@ -55,7 +57,7 @@ echo -200 > /dev/rtmotor_raw_r0
 描画が間に合っていない場合、Gazebo上のロボットの動きが鈍く見えます。  
 陰を描画しないようにすることでほとんどの場合は動作が改善します。
 
-詳しくは[ROSトラブルシューティング](https://github.com/yukixx6/raspimouse_sim_tutorial/tree/7041ca2f8b06749c8dcadd9ac1d69bc4e7277dc4/docs/source/troubleshooting.md)をご覧ください。
+詳しくは[ROSトラブルシューティング](../troubleshooting.md#gazebonogakakukakusurugazebonofurmurtogai)をご覧ください。
 
 ### rtlightsensorについてのエラー
 
@@ -65,5 +67,5 @@ echo -200 > /dev/rtmotor_raw_r0
 
 上記のエラーが繰り返し出る場合、デバイスファイルが無いことがあります。
 
-[ROSトラブルシューティング](https://github.com/yukixx6/raspimouse_sim_tutorial/tree/7041ca2f8b06749c8dcadd9ac1d69bc4e7277dc4/docs/source/troubleshooting.md)をご覧ください。
+[ROSトラブルシューティング](../troubleshooting.md#rtlightsensornitsuitenoergaru)をご覧ください。
 
