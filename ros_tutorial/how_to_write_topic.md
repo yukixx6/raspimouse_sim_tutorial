@@ -1,4 +1,4 @@
-# ROSチュートリアル
+# トピックの書き方
 
 ## ROSチュートリアルの流れ
 
@@ -12,31 +12,26 @@
 
 ROSでは、使用するプログラム言語として主に**Python**と**C++**が用いられますが、このチュートリアルでは**Python**を使用したいと思います。
 
-まず、パブリッシャ(publisher)とサブスクライバ(subscriber)ついて説明します。
+まず、パブリッシャ\(publisher\)とサブスクライバ\(subscriber\)ついて説明します。
 
-この2つは、ノード(node)間をトピック(topic)を介してデータをやり取りするときに使用され、
-簡易的に説明するとこうなります。
+この2つは、ノード\(node\)間をトピック\(topic\)を介してデータをやり取りするときに使用され、 簡易的に説明するとこうなります。
 
 * パブリッシャ : データを配信
-
 * サブスクライバ : データを受け取る
 
 ![](../.gitbook/assets/pub_sub.png)
 
-やり取りするデータはメッセージ(msg)の指定された型に入れ、トピック(topic)として配信されます。
+やり取りするデータはメッセージ\(msg\)の指定された型に入れ、トピック\(topic\)として配信されます。
 
-詳しくは[よく使用されるROS用語](how_to_use_ros_word.md)を御覧ください。
+詳しくは[よく使用されるROS用語](https://github.com/yukixx6/raspimouse_sim_tutorial/tree/e81e0268e5e9655d1a410d9cdac60d2be3c634f8/ros_tutorial/how_to_use_ros_word.md)を御覧ください。
 
-メッセージは、標準パッケージの**std_msgs**の他に、自分で定義することもできます。
-
-<br>
+メッセージは、標準パッケージの**std\_msgs**の他に、自分で定義することもできます。
 
 それではパブリッシャとサブスクライバを書いていきます。
 
 まず[ROSチュートリアルの1](how_to_create_pkg.md)で作成した`ros_tutorial`に移動します。
 
-Pythonのプログラムはscriptsディレクトリの中で作成します。
-scriptsディレクトリが無い場合は作成しましょう。
+Pythonのプログラムはscriptsディレクトリの中で作成します。 scriptsディレクトリが無い場合は作成しましょう。
 
 ```text
 roscd ros_tutorial
@@ -49,11 +44,11 @@ mkdir scripts
 
 プログラム名は`time_pub.py`とします。
 
-```
+```text
 vim scripts/time_pub.py
 ```
 
-```Python:time_pub.py
+```text
 #!/usr/bin/env python
 import rospy
 from std_msgs.msg import Float64
@@ -63,9 +58,9 @@ pub = rospy.Publisher('UnixTime', Float64 , queue_size=1)
 
 rate = rospy.Rate(10)
 while not rospy.is_shutdown():
-	now = rospy.get_time()
-	pub.publish(now)
-	rate.sleep()
+    now = rospy.get_time()
+    pub.publish(now)
+    rate.sleep()
 ```
 
 書いたプログラムには以下のコマンドを実行してください。
@@ -73,54 +68,54 @@ while not rospy.is_shutdown():
 ```text
 chmod +x scritps/time_pub.py
 ```
-これはプログラムに実行権限を与えています。
 
+これはプログラムに実行権限を与えています。
 
 ### コード解説
 
-```Python:time_pub.py
+```text
 #!/usr/bin/env python
 ```
 
-Pythonでプログラムを書くときのお約束で、[シバン](https://www.google.co.jp/search?q=%E3%82%B7%E3%83%90%E3%83%B3)といいます。
+Pythonでプログラムを書くときのお約束で、[シバン](https://www.google.co.jp/search?q=シバン)といいます。
 
-```Python:time_pub.py
+```text
 import rospy
 ```
 
 `rospy`というモジュールをインポートしています。`rospy`はPythonでROSを扱うときに使用します。
 
-```Python:time_pub.py
+```text
 from std_msgs.msg import Float64
 ```
 
 `std_msgs`の`Float64`という型のメッセージをインポートしています。`Float64`は浮動小数点変数の64ビットという意味です。
 
-```Python:time_pub.py
+```text
 rospy.init_node('time_pub')
 ```
 
 `time_pub`というノードを定義しています。
 
-```Python:time_pub.py
+```text
 pub = rospy.Publisher('UnixTime', Float64 , queue_size=1)
 ```
 
 `UnixTime`というトピック名、`Float64`というメッセージの型のパブリッシャを定義しています。
 
-```Python:time_pub.py
+```text
 rate = rospy.Rate(10)
 while not rospy.is_shutdown():
-	now = rospy.get_time()
-	pub.publish(now)
-	rate.sleep()
+    now = rospy.get_time()
+    pub.publish(now)
+    rate.sleep()
 ```
 
 `now = rospy.get_time()`は`now`という変数に現在のUnixTimeを代入しています。
 
 `pub.publish(now)`は`now`をパブリッシュしています。
 
-シャットダウンされるまで10 [Hz] 周期で上記の2つを行っています。
+シャットダウンされるまで10 \[Hz\] 周期で上記の2つを行っています。
 
 ## サブスクライバ
 
@@ -128,22 +123,22 @@ while not rospy.is_shutdown():
 
 サブスクライバは`time_sub.py`とします。
 
-```
+```text
 vim scripts/time_sub.py
 ```
 
-```Python:time_sub.py
+```text
 #!/usr/bin/env python
 import rospy
 from std_msgs.msg import Float64
 
 def callback(data):
-	print(data.data)
+    print(data.data)
 
 if __name__ == "__main__":
-	rospy.init_node('time_sub')
-	sub = rospy.Subscriber('UnixTime', Float64 , callback)
-	rospy.spin()
+    rospy.init_node('time_sub')
+    sub = rospy.Subscriber('UnixTime', Float64 , callback)
+    rospy.spin()
 ```
 
 パブリッシャと同様に以下のコマンドを実行してください。
@@ -152,10 +147,9 @@ if __name__ == "__main__":
 chmod +x scripts/time_sub.py
 ```
 
-
 ### コード解説
 
-```Python:time_sub.py
+```text
 #!/usr/bin/env python
 import rospy
 from std_msgs.msg import Float64
@@ -163,30 +157,29 @@ from std_msgs.msg import Float64
 
 ここまでパブリッシャと同じです。
 
-```Python:time_sub.py
+```text
 def callback(data):
-	print(data.data)
+    print(data.data)
 ```
 
 callback関数を定義しています。
 
 `data.data`というのは、Float64の中のdataを参照するという意味です。
 
-```Python:time_sub.py
+```text
 if __name__ == "__main__":
 ```
 
-通常プログラムがインポートされた場合、関数を自動で実行してしまいますが、
-このif文内に書いた関数は自動で実行されなくなります。
+通常プログラムがインポートされた場合、関数を自動で実行してしまいますが、 このif文内に書いた関数は自動で実行されなくなります。
 
-```Python:time_sub.py
+```text
     rospy.init_node('time_sub')
 ```
 
 `time_sub`というノードを定義しています。
 
-```Python:time_sub.py
-	sub = rospy.Subscriber('UnixTime', Float64 , callback)
+```text
+    sub = rospy.Subscriber('UnixTime', Float64 , callback)
 ```
 
 サブスクライバの宣言をしています。
@@ -195,8 +188,8 @@ if __name__ == "__main__":
 
 最後の`callback`は、受け取った`Float64`型のデータを渡す関数を書く部分であり、今回はcallback関数に渡しています。
 
-```Python:time_sub.py
-	rospy.spin()
+```text
+    rospy.spin()
 ```
 
 プログラムを終了させないようにしています。
@@ -226,8 +219,24 @@ rosrun ros_tutorial time_sub.py
 `time_sub.py`を起動したとき、以下のように出力されたら正常に動作しています。
 
 ```text
-ubuntu@ubuntu:~$ rosrun ros_tutorial time_sub.py 1540459203.781540459203.881540459203.981540459204.081540459204.181540459204.281540459204.381540459204.481540459204.581540459204.681540459204.781540459204.881540459204.981540459205.081540459205.18
-	　︙```
-出力されているこの数値はUNIX時間というもので、
-1970年1月1日午前0時0分0秒からの経過秒数になります。
+ubuntu@ubuntu:~$ rosrun ros_tutorial time_sub.py 
+1540459203.78
+1540459203.88
+1540459203.98
+1540459204.08
+1540459204.18
+1540459204.28
+1540459204.38
+1540459204.48
+1540459204.58
+1540459204.68
+1540459204.78
+1540459204.88
+1540459204.98
+1540459205.08
+1540459205.18
+    　︙
+```
+
+出力されているこの数値はUNIX時間というもので、 1970年1月1日午前0時0分0秒からの経過秒数になります。
 

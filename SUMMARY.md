@@ -9,7 +9,7 @@
   * [Raspberry Pi Mouse Simulatorのインストール方法](setup/how_to_install_simulator.md)
   * [Raspberry Pi Mouse Simulatorの動作確認](setup/how_to_use_raspimouse_sim.md)
 * [ROSチュートリアル](ros_tutorial/README.md)
-  * [catkinパッケージの作り方](ros_tutorial/how_to_create_pkg.md)
+  * [ROSパッケージの作り方](ros_tutorial/how_to_create_pkg.md)
   * [トピックの書き方](ros_tutorial/how_to_write_topic.md)
   * [独自のメッセージファイルの作り方](ros_tutorial/how_to_create_msg.md)
   * [サービスを書き方](ros_tutorial/how_to_write_service.md)

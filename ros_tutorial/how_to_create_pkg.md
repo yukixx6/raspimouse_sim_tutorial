@@ -1,4 +1,4 @@
-# ROSチュートリアル
+# ROSパッケージの作り方
 
 ## ROSチュートリアルの流れ
 
@@ -28,12 +28,11 @@ catkin_create_pkg <パッケージ名> std_msgs rospy roscpp
 
 `catkin_create_pkg`はパッケージを作成するときに用いるcatkinコマンドです。
 
-std_msgsとrospy、roscppは依存パッケージであり、以下のようになっています。
+std\_msgsとrospy、roscppは依存パッケージであり、以下のようになっています。
 
-* std_msgs : 標準のメッセージの型
+* std\_msgs : 標準のメッセージの型
 * rospy : pythonをROSで使用するときに必要になるモジュール
 * roscpp : C++をROSで使用するときに必要になるモジュール
-
 
 今回は`ros_tutorial`というパッケージ名にします。
 
@@ -48,7 +47,7 @@ cd ../
 catkin_make
 ```
 
-`catkin_make`とは、`catkin_ws/src`にあるパッケージをビルドするときに使用します。
-またパッケージを追加した時や、**C++**のプログラムを追加・変更したときも行います。
+`catkin_make`とは、`catkin_ws/src`にあるパッケージをビルドするときに使用します。 またパッケージを追加した時や、**C++**のプログラムを追加・変更したときも行います。
 
 **Python**の場合は、プログラムに対し`chmod +x <プログラム名>`を行い、一度実行権限を与えれば、変更のたびに`catkin_make`は必要ありません。
+
