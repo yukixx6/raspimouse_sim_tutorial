@@ -2,7 +2,7 @@
 
 ## ROSチュートリアルの流れ
 
-1. [catkinパッケージの作り方](how_to_create_pkg.md)
+1. [ROSパッケージの作り方](how_to_create_pkg.md)
 2. [トピックの書き方](how_to_write_topic.md)
 3. [独自のメッセージファイルの作り方](how_to_create_msg.md)　←今ここ
 4. [サービスを書き方](how_to_write_service.md)
@@ -63,7 +63,7 @@ vim package.xml
  35      <build_depend>message_generation</build_depend>  36   <!-- Use buildtool_depend for build tool packages: --> 37   <!--   <buildtool_depend>catkin</buildtool_depend> --> 38   <!-- Use run_depend for packages you need at runtime: --> 39    <run_depend>message_runtime</run_depend>     40   <!-- Use test_depend for packages you need only for testing: --> 41   <!--   <test_depend>gtest</test_depend> --> 42   <buildtool_depend>catkin</buildtool_depend> 43   <build_depend>roscpp</build_depend>
 ```
 
-#### 次に`CMAkeLists.txt`を編集します。
+#### 次に`CMakeLists.txt`を編集します。
 
 ```text
 vim CMakeLists.txt

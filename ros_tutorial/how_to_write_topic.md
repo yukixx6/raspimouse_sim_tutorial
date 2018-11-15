@@ -2,7 +2,7 @@
 
 ## ROSチュートリアルの流れ
 
-1. [catkinパッケージの作り方](how_to_create_pkg.md)
+1. [ROSパッケージの作り方](how_to_create_pkg.md)
 2. [トピックの書き方](how_to_write_topic.md)　←今ここ
 3. [独自のメッセージファイルの作り方](how_to_create_msg.md)　
 4. [サービスを書き方](how_to_write_service.md)
@@ -21,7 +21,7 @@ ROSでは、使用するプログラム言語として主に**Python**と**C++**
 
 * サブスクライバ : データを受け取る
 
-![](images/pub_sub.png)
+![](../.gitbook/assets/pub_sub.png)
 
 やり取りするデータはメッセージ(msg)の指定された型に入れ、トピック(topic)として配信されます。
 
@@ -203,7 +203,7 @@ if __name__ == "__main__":
 
 ## 相関図
 
-![](images/time_pub_sub.png)
+![](../.gitbook/assets/time_pub_sub.png)
 
 ## 実行方法
 

@@ -2,7 +2,7 @@
 
 ## ROSチュートリアルの流れ
 
-1. [catkinパッケージの作り方](how_to_create_pkg.md)　←今ここ
+1. [ROSパッケージの作り方](how_to_create_pkg.md)　←今ここ
 2. [トピックの書き方](how_to_write_topic.md)
 3. [独自のメッセージファイルの作り方](how_to_create_msg.md)　
 4. [サービスを書き方](how_to_write_service.md)
@@ -12,9 +12,11 @@
 
 ROSチュートリアルでは、実際にパッケージを作成し、独自のカスタマイズをしてみたいと思います。
 
-## catkinパッケージを作る
+パッケージとは、目的に沿ったプログラムなどの集合体であり、開発はパッケージ単位で行われます。
 
-catkinパッケージは`catkin_ws/src`の中で作成します。
+## ROSパッケージを作る
+
+ROSパッケージは`catkin_ws/src`の中で作成します。
 
 ```text
 cd ~/catkin_ws/src
