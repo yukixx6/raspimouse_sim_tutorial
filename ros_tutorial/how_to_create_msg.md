@@ -318,7 +318,7 @@ rosrun ros_tutorial time_sub2.py
 ## 実行結果
 
 ```text
-ubuntu@ubuntu:~/catkin_ws/src/tutorial_pkg$ rosrun ros_tutorial time_sub2.py 
+$ rosrun ros_tutorial time_sub2.py 
 date : 20181108 , time : 224947.85194
 date : 20181108 , time : 224947.95175
 date : 20181108 , time : 224948.05449

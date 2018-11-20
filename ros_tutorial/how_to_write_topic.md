@@ -77,7 +77,7 @@ chmod +x scritps/time_pub.py
 #!/usr/bin/env python
 ```
 
-Pythonでプログラムを書くときのお約束で、[シバン](https://www.google.co.jp/search?q=シバン)といいます。
+Pythonでプログラムを書くときのお約束で、シバンといいます。
 
 ```text
 import rospy
