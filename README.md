@@ -51,9 +51,9 @@ Raspberry Pi Mouse SimulatorはメインボードにRaspberry Piを使った左�
 * [まとめて起動するやり方](ros_tutorial/how_to_use_launch.md)
 * [サービスを書き方](ros_tutorial/how_to_write_service.md)
 * [独自のサービスファイルの作り方](ros_tutorial/how_to_create_srv.md)
-* **付録**
-  * [よく使用するROS用語](https://github.com/yukixx6/raspimouse_sim_tutorial/tree/8306d89bd7c362941fad983a919635d386533096/ros_tutorial/ros_word.md)
-  * [よく使用するROSコマンド](https://github.com/yukixx6/raspimouse_sim_tutorial/tree/8306d89bd7c362941fad983a919635d386533096/ros_tutorial/ros_comand.md)
+* [付録](ros_tutorial/appendix/README.md)
+  * [よく使用するROS用語](ros_tutorial/appendix/ros_word.md)
+  * [よく使用するROSコマンド](ros_tutorial/appendix/ros_comand.md)
 
 #### シミュレータのチュートリアル
 
