@@ -180,7 +180,7 @@ def talker():
 
 if __name__ == '__main__':
     rospy.init_node('time_pub')
-    pub = rospy.Publisher('UnixTime', Date , queue_size=1)
+    pub = rospy.Publisher('Date_and_Time', Date , queue_size=1)
     talker()
     rospy.spin()
 ```
@@ -270,7 +270,7 @@ def callback(data):
 
 if __name__ == "__main__":
     rospy.init_node('time_sub')
-    sub = rospy.Subscriber('UnixTime', Date , callback)  #changed
+    sub = rospy.Subscriber('Date_and_Time', Date , callback)  #changed
     rospy.spin()
 ```
 
@@ -295,10 +295,10 @@ from ros_tutorial.msg import Date
 `date`はint型のため`%d`、`time`はfloat型のため`%f`で表示しています。
 
 ```text
-    sub = rospy.Subscriber('UnixTime', Date , callback)
+    sub = rospy.Subscriber('Date_and_Time', Date , callback)
 ```
 
-メッセージの型を`Date`に変更しています。
+トピック名をメッセージの型を`Date`に変更しています。
 
 ## 実行方法
 

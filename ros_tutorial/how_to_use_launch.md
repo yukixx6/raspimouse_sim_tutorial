@@ -79,13 +79,13 @@ rostopic list
 ```
 
 ```text
-/UnixTime
+/Date_and_Time
 /rosout
 /rosout_agg
 ```
 
 ```text
-rostopic echo /UnixTime
+rostopic echo /Date_and_Time
 ```
 
 ```text
