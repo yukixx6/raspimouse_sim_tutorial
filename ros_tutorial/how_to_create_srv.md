@@ -69,8 +69,7 @@ catkin_make
 
 これで準備完了です。
 
-  
- `DateTrigger.srv`が使用できるか確認していきます。
+`DateTrigger.srv`が使用できるか確認していきます。
 
 ```text
 rossrv show ros_tutorial/DateTrigger
