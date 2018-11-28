@@ -24,11 +24,11 @@ Raspberry Pi Mouse SimulatorはメインボードにRaspberry Piを使った左�
 
 ## 目次
 
-### 1. はじめに
+### はじめに
 
 * [ROSとは](https://github.com/yukixx6/raspimouse_sim_tutorial/tree/8306d89bd7c362941fad983a919635d386533096/ROS.md)
 
-### 2. セットアップ
+### セットアップ
 
 #### ROSのインストール
 
@@ -41,30 +41,30 @@ Raspberry Pi Mouse SimulatorはメインボードにRaspberry Piを使った左�
 * [Raspberry Pi Mouse Simulatorのインストール方法](setup/how_to_install_simulator.md)
 * [Raspberry Pi Mouse Simulatorの動作確認](setup/how_to_use_raspimouse_sim.md)
 
-### 3. チュートリアル
+### チュートリアル
 
 #### ROSのチュートリアル
 
-* [ROSパッケージの作り方](ros_tutorial/how_to_create_pkg.md)
-* [トピックの書き方](ros_tutorial/how_to_write_topic.md)
-* [独自のメッセージファイルの作り方](ros_tutorial/how_to_create_msg.md)
-* [まとめて起動するやり方](ros_tutorial/how_to_use_launch.md)
-* [サービスを書き方](ros_tutorial/how_to_write_service.md)
-* [独自のサービスファイルの作り方](ros_tutorial/how_to_create_srv.md)
-* [付録](ros_tutorial/appendix/)
-  * [ROSでよく使用する用語](ros_tutorial/appendix/ros_word.md)
-  * [よく使用するROSコマンド](ros_tutorial/appendix/ros_comand.md)
+1. [ROSパッケージの作り方](ros_tutorial/how_to_create_pkg.md)
+2. [トピックの書き方](ros_tutorial/how_to_write_topic.md)
+3. [独自のメッセージファイルの作り方](ros_tutorial/how_to_create_msg.md)
+4. [まとめて起動するやり方](ros_tutorial/how_to_use_launch.md)
+5. [サービスを書き方](ros_tutorial/how_to_write_service.md)
+6. [独自のサービスファイルの作り方](ros_tutorial/how_to_create_srv.md)
+7. [付録](ros_tutorial/appendix/)
+   * [ROSでよく使用する用語](ros_tutorial/appendix/ros_word.md)
+   * [よく使用するROSコマンド](ros_tutorial/appendix/ros_comand.md)
 
 #### シミュレータのチュートリアル
 
-* [シミュレータ上のラズパイマウスを動かす方法 Part1](tutorial/how_to_control_raspimouse_on_sim_1.md)
-* [シミュレータ上のラズパイマウスを動かす方法 Part2](tutorial/how_to_control_raspimouse_on_sim_2.md)
-* [シミュレータ上のラズパイマウスを動かす方法 Part3](tutorial/how_to_control_raspimouse_on_sim_3.md)
-* [シミュレータ上のラズパイマウスを動かす方法 Part4](tutorial/how_to_control_raspimouse_on_sim_4.md)
-* [シミュレータ上のラズパイマウスを動かす方法 Part5](https://github.com/yukixx6/raspimouse_sim_tutorial/tree/8306d89bd7c362941fad983a919635d386533096/tutorial/how_to_control_raspimouse_on_sim_5.md)
-* [シミュレータ上のラズパイマウスを動かす方法 Part6](https://github.com/yukixx6/raspimouse_sim_tutorial/tree/8306d89bd7c362941fad983a919635d386533096/tutorial/how_to_control_raspimouse_on_sim_6.md)
+1. [シミュレータ上のラズパイマウスを動かす方法 Part1](tutorial/how_to_control_raspimouse_on_sim_1.md)
+2. [シミュレータ上のラズパイマウスを動かす方法 Part2](tutorial/how_to_control_raspimouse_on_sim_2.md)
+3. [シミュレータ上のラズパイマウスを動かす方法 Part3](tutorial/how_to_control_raspimouse_on_sim_3.md)
+4. [シミュレータ上のラズパイマウスを動かす方法 Part4](tutorial/how_to_control_raspimouse_on_sim_4.md)
+5. [シミュレータ上のラズパイマウスを動かす方法 Part5](https://github.com/yukixx6/raspimouse_sim_tutorial/tree/8306d89bd7c362941fad983a919635d386533096/tutorial/how_to_control_raspimouse_on_sim_5.md)
+6. [シミュレータ上のラズパイマウスを動かす方法 Part6](https://github.com/yukixx6/raspimouse_sim_tutorial/tree/8306d89bd7c362941fad983a919635d386533096/tutorial/how_to_control_raspimouse_on_sim_6.md)
 
-### 5. トラブルシューティング
+### トラブルシューティング
 
 * [ROSのトラブルシューティング](troubleshooting.md)
 
