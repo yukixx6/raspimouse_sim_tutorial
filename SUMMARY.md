@@ -16,7 +16,7 @@
   * [サービスを書き方](ros_tutorial/how_to_write_service.md)
   * [独自のサービスファイルの作り方](ros_tutorial/how_to_create_srv.md)
   * [付録](ros_tutorial/appendix/README.md)
-    * [よく使用するROS用語](ros_tutorial/appendix/ros_word.md)
+    * [ROSでよく使用する用語](ros_tutorial/appendix/ros_word.md)
     * [よく使用するROSコマンド](ros_tutorial/appendix/ros_comand.md)
 * [シミュレータのチュートリアル](tutorial/README.md)
   * [シミュレータ上のラズパイマウスを動かす方法 Part1](tutorial/how_to_control_raspimouse_on_sim_1.md)

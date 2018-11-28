@@ -1,25 +1,25 @@
-# よく使用するROS用語
+# ROSでよく使用する用語
 
 ## 一覧
 
-* [node](ros_word.md#node)
-* [package](ros_word.md#package)
-* [topic](ros_word.md#topic)
-  * [publish、publisher](ros_word.md#publish)
-  * [subscribe、subscriber](ros_word.md#subscribe)
-  * [message](ros_word.md#message)
-* [service](ros_word.md#service)
-* [action](ros_word.md#action)
+* [ノード(node)](ros_word.md#node)
+* [パッケージ(package)](ros_word.md#package)
+* [トピック(topic)](ros_word.md#topic)
+  * [パブリッシュ(publish)、パブリッシャ(publisher)](ros_word.md#publish)
+  * [サブスクライブ(subscribe)、サブスクライバ(subscriber)](ros_word.md#subscribe)
+  * [メッセージ(message)](ros_word.md#message)
+* [サービス(service)](ros_word.md#service)
+* [アクション(action)](ros_word.md#action)
 
-## node\(ノード\) <a id="node"></a>
+## ノード\(node\) <a id="node"></a>
 
 目的ごとの最小プロセスの名称です。
 
-## package\(パッケージ\) <a id="package"></a>
+## パッケージ\(package\) <a id="package"></a>
 
 目的に沿ったノードやプログラム、メッセージ、サービス、アクション等がひとまとまりになったものの名称です。
 
-## topic\(トピック\) <a id="topic"></a>
+## トピック\(topic\) <a id="topic"></a>
 
 ノード間でやり取りするデータのことです。
 
@@ -27,25 +27,25 @@
 
 トピックの配信には「パブリッシャ」、トピックの購読には「サブスクライバ」を使用します。
 
-### publish\(パブリッシュ\)、publisher\(パブリッシャ\) <a id="publish"></a>
+### パブリッシュ\(publish\)、パブリッシャ\(publisher\) <a id="publish"></a>
 
 パブリッシュとは、「配信」を意味し、トピックの配信を指します。 パブリッシャは「配信者」となります。
 
 トピックを配信する場合は、このパブリッシャを使用します。
 
-### subscribe\(サブスクライブ\)、subscriber\(サブスクライバ\) <a id="subscribe"></a>
+### サブスクライブ\(subscribe\)、サブスクライバ\(subscriber\) <a id="subscribe"></a>
 
 パブリッシャに対し、サブスクライブは「購読」を意味し、トピックの購読を指します。 サブスクライバは「購読者」となります。
 
 パブリッシャによって配信されたトピックはサブスクライバで購読できます。
 
-### message\(メッセージ\) <a id="message"></a>
+### メッセージ\(message\) <a id="message"></a>
 
 メッセージは、トピックでデータをやり取りするときに用いる「入れ物」のことです。
 
 データは、メッセージの入れ物の「型」に合わせてあげる必要があり、このメッセージをやり取りすることで、データを受け渡しを行います。
 
-## service\(サービス\) <a id="service"></a>
+## サービス\(service\) <a id="service"></a>
 
 常にデータを発信しているトピックに対し、サービスは要求があったときのみ応答します。
 
@@ -53,7 +53,7 @@
 
 トピックではデータの「入れ物」にメッセージを使用しましたが、サービスではサービス用のファイル\(`.srv`\)を使用します。
 
-## action\(アクション\) <a id="action"></a>
+## アクション\(action\) <a id="action"></a>
 
 アクションとは、トピック、サービスと違って、処理が長く応答するまでの時間がかかる時に使用します。また処理の途中結果を受け取ることも出来ます。
 
