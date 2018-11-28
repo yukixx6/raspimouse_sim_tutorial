@@ -133,8 +133,8 @@ vim scripts/time_sub.py
 import rospy
 from std_msgs.msg import Float64
 
-def callback(data):
-    print(data.data)
+def callback(message):
+    print(message.data)
 
 if __name__ == "__main__":
     rospy.init_node('time_sub')
@@ -159,13 +159,13 @@ from std_msgs.msg import Float64
 ここまでパブリッシャと同じです。
 
 ```text
-def callback(data):
-    print(data.data)
+def callback(message):
+    print(message.data)
 ```
 
 callback関数を定義しています。
 
-`data.data`というのは、Float64の中のdataを参照するという意味です。
+`message.data`というのは、Float64の中のdataを参照するという意味です。
 
 ```text
 if __name__ == "__main__":
@@ -220,7 +220,7 @@ rosrun ros_tutorial time_sub.py
 `time_sub.py`を起動したとき、以下のように出力されたら正常に動作しています。
 
 ```text
-ubuntu@ubuntu:~$ rosrun ros_tutorial time_sub.py 
+$ rosrun ros_tutorial time_sub.py 
 1540459203.78
 1540459203.88
 1540459203.98

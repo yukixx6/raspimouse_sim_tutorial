@@ -138,7 +138,7 @@ float64 time
 
 ## プログラムを改良
 
-先程作成したメッセージファイルを使用して、プログラムを改良していきます。 まず`ros_tutorial/scripts`に移動します。
+先程作成したメッセージファイルを使用して、プログラムを改良していきます。 まず`ros_tutorial`に移動します。
 
 ```text
 roscd ros_tutorial
@@ -185,6 +185,8 @@ if __name__ == '__main__':
     rospy.spin()
 ```
 
+実行権限を与えます。
+
 ```text
 chmod +x time_pub2.py
 ```
@@ -198,7 +200,7 @@ from ros_tutorial.msg import Date
 from datetime import datetime
 ```
 
-新たに、先程作成した`Date`と`datetime`をインポートしています。 `datetime`は現在日時を取得するために必要なモジュールです。
+新たに、先程作成した`Date`をインポートしています。また現在日時を取得するために必要なモジュール`datetime`もインポートしています。 
 
 ```text
 def talker():
@@ -234,7 +236,7 @@ def talker():
         l = str(now)
 ```
 
-現在日時を取得し、`l`に渡しています。
+現在日時を取得し、配列にして`l`に渡しています。
 
 ```text
         for i in range(0,10):
@@ -243,9 +245,9 @@ def talker():
             d.time += l[i]
 ```
 
-`date`に日付、`time`に時間を渡しています。
+for文で配列の0~10番目を日付として`date`に渡しています。同様に配列の11~25番目を時間として`time`に渡しています。
 
-しかし、このままだと`-`や`:`の文字が含まれています。
+しかし、このままだと`-`や`:`の文字が含まれているため、
 
 ```text
         d.date = int(d.date.replace('-', ''))
@@ -254,7 +256,7 @@ def talker():
         rate.sleep()
 ```
 
-そのため`-`と`:`を削除し、`int`と`float`型にしてパブリッシュしています。
+`replace`を用いて`-`や`:`の文字を取り除き、`int`型と`float`型にしてパブリッシュしています。
 
 ### サブスクライバ
 
@@ -265,8 +267,8 @@ def talker():
 import rospy
 from ros_tutorial.msg import Date  #changed
 
-def callback(data):
-    print("date : %d , time : %f" % (data.date,data.time) )  #changed
+def callback(message):
+    print("date : %d , time : %f" % (message.date,message.time) )  #changed
 
 if __name__ == "__main__":
     rospy.init_node('time_sub')
@@ -289,7 +291,7 @@ from ros_tutorial.msg import Date
 `Date`をインポートしています。
 
 ```text
-    print("date : %d , time : %f" % (data.date,data.time) )
+    print("date : %d , time : %f" % (message.date,message.time) )
 ```
 
 `date`はint型のため`%d`、`time`はfloat型のため`%f`で表示しています。
