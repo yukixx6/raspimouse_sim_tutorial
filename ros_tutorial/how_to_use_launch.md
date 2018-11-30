@@ -11,13 +11,13 @@
 
 ## はじめに
 
-[ROSのチュートリアル３](how_to_use_launch.md)では、作成したプログラムを起動するときに`roscore`を立ち上げて、`rosrun ros_tutorial time_pub2.py` `rosrun ros_tutorial timesub2.py`と起動していました。
+[独自のメッセージファイルの作り方](how_to_create_msg.md)では、作成したプログラムを起動するときに`roscore`を立ち上げて、`rosrun ros_tutorial time_pub2.py` 、`rosrun ros_tutorial timesub2.py`とそれぞれ起動していました。
 
 しかし毎回これらのプログラムを立ち上げるのは手間です。 そこでROSにはまとめて起動することができる`roslaunch`というコマンドがあり、このコマンドを使用します。
 
 この章では、`roslaunch`コマンドを使用して、まとめて複数のプログラムを起動するやり方について説明します。
 
-詳しい説明や、他のROSコマンドについては[よく使用するROSコマンド](https://github.com/yukixx6/raspimouse_sim_tutorial/tree/09b9f2d2dbb01c67d7b2cd66039d5c80450b1823/ros_tutorial/ros_comand.md)を御覧ください。
+詳しい説明や、他のROSコマンドについては[よく使用するROSコマンド](appendix/ros_comand.md)を御覧ください。
 
 ## launchファイルを書く
 

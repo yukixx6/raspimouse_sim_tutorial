@@ -19,7 +19,7 @@
 
 またトピックではメッセージ\(.msg\)を使用しましたが、サービスではサービスのファイル\(.srv\)を使用します。
 
-詳しくは[よく使用されるROS用語](https://github.com/yukixx6/raspimouse_sim_tutorial/tree/e81e0268e5e9655d1a410d9cdac60d2be3c634f8/ros_tutorial/how_to_use_ros_word.md)を御覧ください。
+詳しくは[ROSでよく使用する用語](appendix/ros_word.md#service)を御覧ください。
 
 ## サービスファイル
 
@@ -101,7 +101,7 @@ if __name__ == "__main__":
     rospy.init_node("srv_server")
 ```
 
-ここまで同じです。
+`srv_server`というノードの名前にしています。
 
 ```text
     srv = rospy.Service('service_call', SetBool, callback_srv)
@@ -238,10 +238,10 @@ rosrun ros_tutorial client.py
 ## 実行結果
 
 ```text
-rosrun tutorial_pkg client.py
+rosrun ros_tutorial client.py
 ```
 
-を実行した時、`rosrun tutorial_pkg server.py`を実行しているターミナルで、
+を実行した時、`rosrun ros_tutorial server.py`を実行しているターミナルで、
 
 ```text
 called
@@ -256,10 +256,10 @@ roscore
 ```
 
 ```text
-rosrun tutorial_pkg server.py
+rosrun ros_tutorial server.py
 ```
 
-ここまで同じですが、こちらでは`rosservice`というコマンドを使用します。 このコマンドではfalseを送ることも出来ます。
+ここまで同じですが、こちらでは`rosservice`というコマンドを使用します。 このコマンドでもサーバに要求できます。
 
 ```text
 rosservice call /service_call "data: true"

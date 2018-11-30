@@ -17,7 +17,7 @@
 
 この2つのファイルは、ROSチュートリアルの1章でパッケージを作成したときに自動で出来たファイルです。 `package.xml`はパッケージの設定が書いてあり、`CMakeLists.txt`はビルドする際の設定が書いてあります。
 
-[ROSチュートリアルの2](https://github.com/yukixx6/raspimouse_sim_tutorial/tree/e81e0268e5e9655d1a410d9cdac60d2be3c634f8/ros_tutorial/how_to_use_topic.md)ではUNIX時間を配信しましたが、この章では現在日時を送るものに改良したいと思います。
+[トピックの書き方](how_to_write_topic.md)ではUNIX時間を配信しましたが、この章では現在日時を送るものに改良したいと思います。
 
 まず、現在日時を送るためのメッセージファイルから作成します。
 

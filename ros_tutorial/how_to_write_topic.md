@@ -24,13 +24,13 @@ ROSでは、使用するプログラム言語として主に**Python**と**C++**
 
 やり取りするデータはメッセージ\(msg\)の指定された型に入れ、トピック\(topic\)として配信されます。
 
-詳しくは[よく使用されるROS用語](https://github.com/yukixx6/raspimouse_sim_tutorial/tree/e81e0268e5e9655d1a410d9cdac60d2be3c634f8/ros_tutorial/how_to_use_ros_word.md)を御覧ください。
+詳しくは[ROSでよく使用する用語](appendix/ros_word.md#topic)を御覧ください。
 
 メッセージは、標準パッケージの**std\_msgs**の他に、自分で定義することもできます。
 
 それではパブリッシャとサブスクライバを書いていきます。
 
-まず[ROSチュートリアルの1](how_to_create_pkg.md)で作成した`ros_tutorial`に移動します。
+まず[ROSパッケージの作り方](how_to_create_pkg.md)で作成した`ros_tutorial`に移動します。
 
 Pythonのプログラムはscriptsディレクトリの中で作成します。 scriptsディレクトリが無い場合は作成しましょう。
 

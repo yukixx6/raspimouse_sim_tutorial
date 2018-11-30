@@ -13,7 +13,7 @@
 
 この章では、独自のサービスファイルを作成し、ROSで使用する方法を解説します。
 
-[ROSチュートリアルの3](https://github.com/yukixx6/raspimouse_sim_tutorial/tree/e81e0268e5e9655d1a410d9cdac60d2be3c634f8/ros_tutorial/how_to_write_msg.md)で作成した日付と時間を配信するトピックを改良して、日付と時間を返すサービスを作成してみたいと思います。
+[独自のメッセージファイルの作り方](how_to_create_msg.md)で作成した日付と時間を配信するトピックを改良して、日付と時間を返すサービスを作成してみたいと思います。
 
 ## サービスファイルの書き方
 
@@ -123,11 +123,15 @@ if __name__ == '__main__':
     rospy.spin()
 ```
 
+実行権限を与えます。
+
 ```text
 chmod +x scripts/date_server.py
 ```
 
 ### コード解説
+
+`time_pub2.py`から変更したところを解説していきます。
 
 ```text
 from ros_tutorial.srv import DateTrigger, DateTriggerResponse
@@ -174,6 +178,8 @@ d = DateTriggereResponse()
 
 ## 実行方法
 
+それぞれ別のターミナルで実行してください。
+
 ```text
 roscore
 ```
@@ -187,6 +193,8 @@ rosservice call /date_call
 ```
 
 ## 実行結果
+
+rosserviceコマンドを実行したターミナルで以下のように表示されたら正しく実行できています。
 
 ```text
 success: True
