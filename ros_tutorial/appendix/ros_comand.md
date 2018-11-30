@@ -15,6 +15,7 @@
 * [通信情報コマンド](ros_comand.md#tusin)
   * [rosnode](ros_comand.md#rosnode)
   * [rostopic](ros_comand.md#rostopic)
+  * [rossrv](ros_comand.md#rossrv)
   * [rosservice](ros_comand.md#rosservice)
   * [rosparam](ros_comand.md#rosparam)
   * [rosmsg](ros_comand.md#rosmsg)
@@ -25,13 +26,13 @@
 
 ## 実行コマンド <a id="zikkou"></a>
 
-### roscore : ROSを使用するときに使用 <a id="roscore"></a>
+### roscore: ROSを使用するときに使用 <a id="roscore"></a>
 
 ```text
 roscore
 ```
 
-### rosrun : プログラムを実行するときに使用 <a id="rosrun"></a>
+### rosrun: プログラムを実行するときに使用 <a id="rosrun"></a>
 
 ```text
 rosrun <パッケージ名> <プログラム名>
@@ -40,7 +41,7 @@ rosrun ros_tutorial time_pub.py
 
 **注 : roscoreを起動しておく必要がある**
 
-### roslaunch : `roscore`と複数の`rosrun`を同時に実行 <a id="roslaunch"></a>
+### roslaunch: `roscore`と複数の`rosrun`を同時に実行 <a id="roslaunch"></a>
 
 ```text
 roslaunch <パッケージ名> <launchファイル名>
@@ -49,7 +50,7 @@ roslaunch sample_program sample.launch
 
 ## 環境コマンド <a id="kankyou"></a>
 
-### rosdep : パッケージの依存しているファイルに関する\(操作する\)コマンド <a id="rosdep"></a>
+### rosdep: パッケージの依存しているファイルに関する\(操作する\)コマンド <a id="rosdep"></a>
 
 rosdepを使用する時、一番最初に実行するコマンドで、 rosdepを初期化し、最新のもの更新する。
 
@@ -73,7 +74,7 @@ rosdep install <ファイル名>
 
 ## 通信情報コマンド <a id="tusin"></a>
 
-### rosnode : ノードに関するコマンド <a id="rosnode"></a>
+### rosnode: ノードに関するコマンド <a id="rosnode"></a>
 
 立ち上がっているノードを確認する。
 
@@ -81,7 +82,7 @@ rosdep install <ファイル名>
 rosnode list
 ```
 
-### rostopic : トピックに関するコマンド <a id="rostopic"></a>
+### rostopic: トピックに関するコマンド <a id="rostopic"></a>
 
 動いているトピック名一覧を表示する。
 
@@ -96,9 +97,30 @@ rostopic echo /<トピック名>
 rostopic echo /lightsensors
 ```
 
-### rosservice : サービスに関するコマンド <a id="rosservice"></a>
+トピックにデータを送る。
 
-動いているサービス一覧を表示する。
+```text
+rostopic pub /<トピック名>　<メッセージの名前/メッセージの型> "<型の名前>: <データ>"
+rostopic pub /UnixTime std_msgs/Float64 "data: 3.0" 
+```
+
+### rossrv: サービスに関するコマンド1 <a id="rossrv"></a>
+
+使用できるサービス全てを表示する。
+
+```text
+rossrv list
+```
+
+サービスの型を確認する。
+
+```text
+rossrv show ros_tutorial/DateTrigger
+```
+
+### rosservice: サービスに関するコマンド2 <a id="rosservice"></a>
+
+動いているサービスの一覧を表示する。
 
 ```text
 rosservice list
@@ -126,9 +148,9 @@ rosparam set /<変数名>
 rosparam set /lightsensors/frequency
 ```
 
-### rosmsg : メッセージに関するコマンド <a id="rosmsg"></a>
+### rosmsg: メッセージに関するコマンド <a id="rosmsg"></a>
 
-動いているメッセージの一覧を表示する。
+メッセージの一覧を表示する。
 
 ```text
 rosmsg list
@@ -141,7 +163,7 @@ rosmsg show <メッセージ名>
 rosmsg show std_msgs/int16
 ```
 
-### rosbag : 現在の状況を記録したり、再現したりするコマンド <a id="rosbag"></a>
+### rosbag: 現在の状況を記録したり、再現したりするコマンド <a id="rosbag"></a>
 
 動いているトピックを記録する。記録したものをバグファイルと呼ぶ。
 
@@ -171,7 +193,7 @@ robag play <バグファイル名>
 
 ## その他のコマンド <a id="sonota"></a>
 
-### roscd : 移動コマンド <a id="roscd"></a>
+### roscd: 移動コマンド <a id="roscd"></a>
 
 指定したディレクトリまで移動する。
 
@@ -180,7 +202,7 @@ roscd <パッケージ名>
 roscd ros_torial
 ```
 
-### rosed : ファイル編集コマンド <a id="rosed"></a>
+### rosed: ファイル編集コマンド <a id="rosed"></a>
 
 指定したファイルを編集する。
 
