@@ -26,7 +26,7 @@ Raspberry Pi Mouse SimulatorはメインボードにRaspberry Piを使った左�
 
 ### はじめに
 
-* [ROSとは](https://github.com/yukixx6/raspimouse_sim_tutorial/tree/8306d89bd7c362941fad983a919635d386533096/ROS.md)
+* [ROSとは](ROS.md)
 
 ### セットアップ
 
@@ -61,8 +61,8 @@ Raspberry Pi Mouse SimulatorはメインボードにRaspberry Piを使った左�
 2. [シミュレータ上のラズパイマウスを動かす方法 Part2](tutorial/how_to_control_raspimouse_on_sim_2.md)
 3. [シミュレータ上のラズパイマウスを動かす方法 Part3](tutorial/how_to_control_raspimouse_on_sim_3.md)
 4. [シミュレータ上のラズパイマウスを動かす方法 Part4](tutorial/how_to_control_raspimouse_on_sim_4.md)
-5. [シミュレータ上のラズパイマウスを動かす方法 Part5](https://github.com/yukixx6/raspimouse_sim_tutorial/tree/8306d89bd7c362941fad983a919635d386533096/tutorial/how_to_control_raspimouse_on_sim_5.md)
-6. [シミュレータ上のラズパイマウスを動かす方法 Part6](https://github.com/yukixx6/raspimouse_sim_tutorial/tree/8306d89bd7c362941fad983a919635d386533096/tutorial/how_to_control_raspimouse_on_sim_6.md)
+5. [シミュレータ上のラズパイマウスを動かす方法 Part5](tutorial/how_to_control_raspimouse_on_sim_5.md)
+6. [シミュレータ上のラズパイマウスを動かす方法 Part6](tutorial/how_to_control_raspimouse_on_sim_6.md)
 
 ### トラブルシューティング
 
