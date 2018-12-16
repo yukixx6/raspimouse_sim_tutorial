@@ -15,7 +15,7 @@ URGとは、北陽電気株式会社さんから発売されている測域セ�
 
 公式サイト : [URG-04LX-UG01](https://www.hokuyo-aut.co.jp/search/single.php?serial=17)
 
-![](images/urg.jpg)
+![](../.gitbook/assets/urg.jpg)
 
 ## SLAMについて
 
@@ -28,7 +28,7 @@ SLAMを行うときは<b>tf</b>と<b>scan</b>という2つのデータが必要�
 
 ### 大まかな流れ
 
-![](images/slam.png)
+![](../.gitbook/assets/slam.png)
 
 ### tf
 
@@ -83,7 +83,7 @@ URGを使用するには先程インストールした`urg_node`が必要にな�
 roslaunch raspimouse_gazebo raspimouse_with_willowgarage.launch
 ```
 
-![](images/raspimouse_sim_willowgarage.png)
+![](../.gitbook/assets/raspimouse_sim_willowgarage.png)
 
 tfの相対座標変換の見てみましょう。
 
@@ -92,7 +92,7 @@ roslaunch raspimouse_ros_2 raspimouse.launch
 rosrun rqt_tf_tree rqt_tf_tree 
 ```
 
-![](images/tf_tree.png)
+![](../.gitbook/assets/tf_tree.png)
 
 `odom`から座標変換されて`base_link`になり、さらに座標変換して枝分かれしてることがわかります。
 これらの情報を`tf`トピックは配信しています。
@@ -117,7 +117,7 @@ rostopic echo /scan
 
 上に遡って見てみると以下のようになっています。
 
-![](images/scan_topic.png)
+![](../.gitbook/assets/scan_topic.png)
 
 画像の<b> ranges: [inf,inf, ... ] </b>の部分がセンサ値になります。カンマで区切られている値1つ1つがセンサ値で、URGが検出できる前方240°分あります。
 
@@ -138,14 +138,14 @@ rviz rviz
 
 次に画面左下の<b>Add</b>を押し<b>By display type</b>の<b>LaserScan</b>を追加し、<b>Topic</b>を<b>/scan</b>にします。
 
-![](images/rviz1.png)
+![](../.gitbook/assets/rviz1.png)
 
-![](images/rviz2.png)
+![](../.gitbook/assets/rviz2.png)
 
 起動時のシミュレータは以下の図のようになっています。
 上のRvizの図と見比べると、赤い点群がシミュレータの壁と対応していることがわかります。
 
-![](images/sim_urg.png)
+![](../.gitbook/assets/sim_urg.png)
 
 ## gmappingのパラメータを設定
 
@@ -268,7 +268,7 @@ roslaunch raspimouse_sim_tutorial_book_sample_program raspimouse_sim_gmapping.la
 初期位置にいる部屋を壁に沿って一周してみましょう。
 
 ## 実行結果
-![](images/sample_map.pgm)
+![](../.gitbook/assets/sample_map.pgm)
 
 ### 行っている様子
 [youtube](https://youtu.be/PUY2l-049CE)
