@@ -268,7 +268,7 @@ roslaunch raspimouse_sim_tutorial_book_sample_program raspimouse_sim_gmapping.la
 初期位置にいる部屋を壁に沿って一周してみましょう。
 
 ## 実行結果
-![](../.gitbook/assets/sample_map.pgm)
+![](../.gitbook/assets/sample_map.png)
 
 ### 行っている様子
 [youtube](https://youtu.be/PUY2l-049CE)
