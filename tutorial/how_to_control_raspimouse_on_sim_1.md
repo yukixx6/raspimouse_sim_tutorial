@@ -9,7 +9,7 @@
 3. [キーボードを用いたラズパイマウスの動かし方](how_to_control_raspimouse_on_sim_3.md)
 4. [コントローラを用いたラズパイマウスの動かし方](how_to_control_raspimouse_on_sim_4.md)
 5. [距離センサの値を利用したラズパイマウスの動かし方](how_to_control_raspimouse_on_sim_5.md)
-6. 測域センサ\(URG\)を用いたSLAMの行い方
+6. [測域センサ\(URG\)を用いたSLAMの行い方](how_to_control_raspimouse_on_sim_6.md)
 
 ラズパイマウスには距離センサが4つ付いています。この距離センサよりセンサ値を得ることができます。  
 Part1では距離センサを使ってロボットと壁との距離を計測してみます。

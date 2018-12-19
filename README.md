@@ -26,7 +26,7 @@ Raspberry Pi Mouse SimulatorはメインボードにRaspberry Piを使った左�
 
 ### はじめに
 
-* [ROSとは](ROS.md)
+* [ROSとは](ros.md)
 
 ### セットアップ
 
