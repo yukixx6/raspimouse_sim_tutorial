@@ -4,22 +4,22 @@
 
 1. [距離センサの値の読み取り方](how_to_control_raspimouse_on_sim_1.md)
 2. [モータを動かし方](how_to_control_raspimouse_on_sim_2.md)
-3. [キーボードを用いたラズパイマウスの動かし方](how_to_control_raspimouse_on_sim_3.md) ← 今ここ
+3. [キーボードを用いたラズパイマウスの動かし方](how_to_control_raspimouse_on_sim_3.md) ←今ここ
 4. [コントローラを用いたラズパイマウスの動かし方](how_to_control_raspimouse_on_sim_4.md)
 5. [距離センサの値を利用したラズパイマウスの動かし方](how_to_control_raspimouse_on_sim_5.md)
 6. [測域センサ\(URG\)を用いたSLAMの行い方](how_to_control_raspimouse_on_sim_6.md)
 
-Part3ではキーボードを用いてシミュレータ上のラズパイマウスを動かす方法を紹介します。
+Part3ではキーボードを用いてシミュレータ上のラズパイマウスを動かしましょう。
 
 キーボードを用いてゲーム感覚で操作できます。
 
 ## キーボードでラズパイマウスを動かす
 
-まず、前回と同様に[Raspberry Pi Mouse Simulatorの起動](https://github.com/yukixx6/raspimouse_sim_tutorial/tree/7041ca2f8b06749c8dcadd9ac1d69bc4e7277dc4/docs/source/how_to_use_raspimouse_sim/README.md)に従い、Gazeboを起動します。
+まず、前回と同様に[Raspberry Pi Mouse Simulatorの起動](https://github.com/yukixx6/raspimouse_sim_tutorial/tree/7041ca2f8b06749c8dcadd9ac1d69bc4e7277dc4/docs/source/how_to_use_raspimouse_sim/README.md)に従い、Gazeboを起動しましょう。
 
-`raspimouse_control` の `scripts` ディレクトリの中にある [`controller_vel_publisher.py`](https://github.com/rt-net/raspimouse_sim/blob/kinetic-devel/raspimouse_control/scripts/controller_vel_publisher.py) を使用します。
+動かすためには`raspimouse_control` の `scripts` ディレクトリの中にある [`controller_vel_publisher.py`](https://github.com/rt-net/raspimouse_sim/blob/kinetic-devel/raspimouse_control/scripts/controller_vel_publisher.py) を使用します。
 
-別のターミナルで以下のコマンドを実行します。
+別のターミナルで以下のコマンドを実行しましょう。
 
 ```text
 rosrun raspimouse_control controller_vel_publisher.py

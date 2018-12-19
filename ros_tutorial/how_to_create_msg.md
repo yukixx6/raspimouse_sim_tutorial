@@ -4,7 +4,7 @@
 
 1. [ROSパッケージの作り方](how_to_create_pkg.md)
 2. [トピックの書き方](how_to_write_topic.md)
-3. [独自のメッセージファイルの作り方](how_to_create_msg.md)　←今ここ
+3. [独自のメッセージファイルの作り方](how_to_create_msg.md) ←今ここ
 4. [まとめて起動するやり方](how_to_use_launch.md)
 5. [サービスを書き方](how_to_write_service.md)
 6. [独自のサービスファイルの作り方](how_to_create_srv.md)
@@ -15,7 +15,7 @@
 
 独自のメッセージファイルをROSで使用するためには、 `CMakeLists.txt`と`package.xml`というファイルを編集します。
 
-この2つのファイルは、ROSチュートリアルの1章でパッケージを作成したときに自動で出来たファイルです。 `package.xml`はパッケージの設定が書いてあり、`CMakeLists.txt`はビルドする際の設定が書いてあります。
+この2つのファイルは、ROSチュートリアルの[ROSパッケージの作り方](how_to_create_pkg.md)でパッケージを作成したときに自動で出来たファイルです。 `package.xml`はパッケージの設定が書いてあり、`CMakeLists.txt`はビルドする際の設定が書いてあります。
 
 [トピックの書き方](how_to_write_topic.md)ではUNIX時間を配信しましたが、この章では現在日時を送るものに改良したいと思います。
 
@@ -138,7 +138,7 @@ float64 time
 
 ## プログラムを改良
 
-先程作成したメッセージファイルを使用して、プログラムを改良していきます。 まず`ros_tutorial`に移動します。
+先程作成したメッセージファイルを使用して、プログラムを改良しましょう。 まず`ros_tutorial`に移動します。
 
 ```text
 roscd ros_tutorial
@@ -260,7 +260,7 @@ for文で配列の0~10番目を日付として`date`に渡しています。同�
 
 ### サブスクライバ
 
-サブスクライバはほとんど変わらないため、`time_sub.py`をコピーし、`time_sub2.py`という名前で保存します。
+サブスクライバはほとんど変わらないため、`time_sub.py`をコピーし、`time_sub2.py`という名前で保存しましょう。
 
 ```text
 #!/usr/bin/env python

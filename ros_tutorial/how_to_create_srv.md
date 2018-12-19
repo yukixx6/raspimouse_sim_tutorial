@@ -7,7 +7,7 @@
 3. [独自のメッセージファイルの作り方](how_to_create_msg.md)
 4. [まとめて起動するやり方](how_to_use_launch.md)
 5. [サービスを書き方](how_to_write_service.md)
-6. [独自のサービスファイルの作り方](how_to_create_srv.md)　←今ここ
+6. [独自のサービスファイルの作り方](how_to_create_srv.md) ←今ここ
 
 ## はじめに
 
@@ -86,7 +86,7 @@ float64 time
 
 ## プログラムを改良
 
-`time_pub2.py`をコピーして`date_server.py`という名前で保存します。
+`time_pub2.py`をコピーして`date_server.py`という名前で保存しましょう。
 
 プログラムを以下のように改良します。
 

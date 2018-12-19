@@ -3,7 +3,7 @@
 ## ラズパイマウスを動かすまでの流れ
 
 1. [距離センサの値の読み取り方](how_to_control_raspimouse_on_sim_1.md)
-2. [モータを動かし方](how_to_control_raspimouse_on_sim_2.md) ← 今ここ
+2. [モータを動かし方](how_to_control_raspimouse_on_sim_2.md) ←今ここ
 3. [キーボードを用いたラズパイマウスの動かし方](how_to_control_raspimouse_on_sim_3.md)
 4. [コントローラを用いたラズパイマウスの動かし方](how_to_control_raspimouse_on_sim_4.md)
 5. [距離センサの値を利用したラズパイマウスの動かし方](how_to_control_raspimouse_on_sim_5.md)
@@ -16,7 +16,7 @@ Part2ではモータの動かし方について取り扱います。
 
 ## モータの通電
 
-次にモータを「通電」させます。
+次にモータを「通電」させましょう。
 
 実機ではスイッチとは別に、デバイスファイルの操作によりモータの電源をON/OFFできます。
 

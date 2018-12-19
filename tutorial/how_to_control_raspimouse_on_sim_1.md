@@ -4,7 +4,7 @@
 
 シミュレータ上のラズパイマウスを動かす方法を複数回に分けて紹介していきます。
 
-1. [距離センサの値の読み取り方](how_to_control_raspimouse_on_sim_1.md) ← 今ここ
+1. [距離センサの値の読み取り方](how_to_control_raspimouse_on_sim_1.md) ←今ここ
 2. [モータを動かし方](how_to_control_raspimouse_on_sim_2.md)
 3. [キーボードを用いたラズパイマウスの動かし方](how_to_control_raspimouse_on_sim_3.md)
 4. [コントローラを用いたラズパイマウスの動かし方](how_to_control_raspimouse_on_sim_4.md)
@@ -16,7 +16,7 @@ Part1では距離センサを使ってロボットと壁との距離を計測し
 
 ## 距離センサから値を読み取る
 
-まず、[Raspberry Pi Mouse Simulatorの動作確認](../setup/how_to_use_raspimouse_sim.md)に従い、Gazeboを起動します。
+まず、[Raspberry Pi Mouse Simulatorの動作確認](../setup/how_to_use_raspimouse_sim.md)に従い、Gazeboを起動しましょう。
 
 Gazeboが起動したら、2枚目のウィンドウで以下のコマンドを入力します。
 

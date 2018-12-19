@@ -7,9 +7,9 @@
 3. [キーボードを用いたラズパイマウスの動かし方](how_to_control_raspimouse_on_sim_3.md)
 4. [コントローラを用いたラズパイマウスの動かし方](how_to_control_raspimouse_on_sim_4.md)
 5. [距離センサの値を利用したモータの動かし方](https://github.com/yukixx6/raspimouse_sim_tutorial/tree/4c5b11f5718b3dfe06667b9146522232fb35bc13/tutorial/how_to_control_raspimouse_sim_5.md)
-6. [測域センサ\(URG\)を用いたSLAMの行い方](https://github.com/yukixx6/raspimouse_sim_tutorial/tree/4c5b11f5718b3dfe06667b9146522232fb35bc13/tutorial/how_to_control_raspimouse_sim_6.md)←今ここ
+6. [測域センサ\(URG\)を用いたSLAMの行い方](https://github.com/yukixx6/raspimouse_sim_tutorial/tree/4c5b11f5718b3dfe06667b9146522232fb35bc13/tutorial/how_to_control_raspimouse_sim_6.md) ←今ここ
 
-Part6では測域センサ\(URG\)を用いたSLAMの行い方について説明します。
+Part6では測域センサ\(URG\)を用いてSLAMを行っていきましょう。
 
 URGとは、北陽電気株式会社さんから発売されている測域センサで、前方240°を検出できます。
 
@@ -116,7 +116,7 @@ rostopic echo /scan
 
 ### センサ値の可視化
 
-RvizというGUIツールを使用します。 Rvizの起動には以下のコマンドを使用します。
+センサ値の可視化にはRvizというGUIツールを使用します。 Rvizの起動には以下のコマンドを使用します。
 
 ```text
 rviz rviz
@@ -255,5 +255,7 @@ roslaunch raspimouse_sim_tutorial_book_sample_program raspimouse_sim_gmapping.la
 
 ### 行っている様子
 
-[youtube](https://youtu.be/PUY2l-049CE)
+YouTubeで公開しています。
+
+ [\[Raspberry Pi Mouse Simulator\] チュートリアルPart6 測域センサ\(URG\)を用いたSLAMの行い方](https://www.youtube.com/watch?v=PUY2l-049CE)
 

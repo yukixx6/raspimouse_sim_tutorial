@@ -6,7 +6,7 @@
 2. [モータの動かし方](how_to_control_raspimouse_on_sim_2.md)
 3. [キーボードを用いたラズパイマウスの動かし方](how_to_control_raspimouse_on_sim_3.md)
 4. [コントローラを用いたラズパイマウスの動かし方](how_to_control_raspimouse_on_sim_4.md)
-5. [距離センサの値を利用したラズパイマウスの動かし方](how_to_control_raspimouse_on_sim_5.md)←今ここ
+5. [距離センサの値を利用したラズパイマウスの動かし方](how_to_control_raspimouse_on_sim_5.md) ←今ここ
 6. [測域センサ\(URG\)を用いたSLAMの行い方](how_to_control_raspimouse_on_sim_6.md)
 
 ## はじめに
@@ -219,6 +219,26 @@ if __name__ == '__main__':
 ```
 
 `# -*- coding: utf-8 -*-`はプログラム内に日本語のコメント書くときに必要で、今回はコードが長くなったのでコメントはプログラム内に書きました。
+
+## 実行方法
+
+シミュレータを起動しましょう。
+
+```text
+roslaunch raspimouse_gazebo raspimouse_with_samplemaze.launch
+```
+
+次にモータを通電させましょう
+
+```text
+rosservice call /motor_on
+```
+
+今回書いた`left_hand.py`を実行しましょう。
+
+```text
+rosrun raspimouse_sim_tutorial left_hand.py
+```
 
 ## 実行結果
 
