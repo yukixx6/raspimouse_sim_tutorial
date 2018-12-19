@@ -186,7 +186,7 @@ rosbag record -O sample.bag -a
 記録したバグファイルを再生する。
 
 ```text
-robag play <バグファイル名>
+rosbag play <バグファイル名>
 ```
 
 **注 : roscoreを起動しておく必要がある**

@@ -148,7 +148,7 @@ gmappingはSLAMのアルゴリズムの1つで、正確に地図作成するた�
 <!--  <param name="frame_id" value="base_link" /> -->
 <!-- </node> -->
 
- <node pkg="rviz" type="rviz" name="rviz" args="-d $(find raspimouse_sim_tutorial_book_sample_program)/config/gmapping.rviz" /> 
+ <node pkg="rviz" type="rviz" name="rviz" args="-d $(find raspimouse_sim_tutorial_program)/config/gmapping.rviz" /> 
 
  <node pkg="gmapping" type="slam_gmapping" name="slam_gmapping" output="screen">
   <param name="base_frame" value="base_link" />

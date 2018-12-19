@@ -15,30 +15,27 @@
 
 プログラムは以下のリポジトリで公開しています。
 
-GitHub:[raspimouse_sim_tutorial_program](https://github.com/yukixx6/raspimouse_sim_tutorial_program)
+GitHub:[raspimouse\_sim\_tutorial\_program](https://github.com/yukixx6/raspimouse_sim_tutorial_program)
 
-フォークかクローンしてみましょう。
-フォークは上記のリポジトリに飛び、ページの右上にある`Fork`のボタンを押せば出来ます。Forkすることで本家から派生して自分のリポジトリを作成することが出来ます。また自分のリポジトリとなっているので、加えた変更をコミットしておくことも出来ます。
+フォークかクローンしてみましょう。 フォークは上記のリポジトリに飛び、ページの右上にある`Fork`のボタンを押せば出来ます。Forkすることで本家から派生して自分のリポジトリを作成することが出来ます。また自分のリポジトリとなっているので、加えた変更をコミットしておくことも出来ます。
 
-実際にクローンしましょう。
-まず`catkin_ws/src`に移動します。
+実際にクローンしましょう。 まず`catkin_ws/src`に移動します。
 
-```
+```text
 cd ~/catkin_ws/src
 ```
 
 フォークした場合、クローンするときは以下のコマンドになります。
 
-```
+```text
 git clone https://github.com/自分のGitHubのユーザー名/raspimouse_sim_tutorial_program.git
 ```
 
 フォークをしていない場合、クローンする時は以下のコマンドになります。
 
-```
+```text
 git clone https://github.com/yukixx6/raspimouse_sim_tutorial_program.git
 ```
-<br>
 
 このPart5では左手法という迷路の解析手法を利用して、ラズパイマウスをスタート地点からゴールまで動かしてみようと思います。
 
@@ -104,7 +101,7 @@ class LeftHand():
         if self.data.left_side > 1500:
             self.turn_move("RIGHT")
             return
-        
+
         # right_sideが1500より大きい時は、右回り旋回
         if self.data.right_side > 1500:
             self.turn_move("LEFT")
@@ -146,7 +143,7 @@ class LeftHand():
                     self.moveFeedback(500, 500, 0.2, "RIGHT")
                 self.rate.sleep()
             self.stopMove()
-            
+
             # 目の前に壁がなくて、右側に壁がない場合
             if self.data.left_forward < 300 or self.data.right_forward < 300:
                 if self.rs_count > 0:
@@ -181,7 +178,7 @@ class LeftHand():
             self.ls_count = 0
             self.rs_count = 0
             return
-        
+
         # 左右関係なく、目の前に壁があるとき
         if self.data.left_forward > 2000 and self.data.right_forward > 2000:
             print("Move: DEAD END")
@@ -205,7 +202,7 @@ class LeftHand():
         rospy.wait_for_service('/motor_on')
         try: rospy.ServiceProxy('/motor_on', Trigger).call()
         except rospy.ServiceException, e: print "Service call failed: %s"%e
-        
+
     def run(self):
         self.rate = rospy.Rate(10)
         self.init()
@@ -227,8 +224,7 @@ if __name__ == '__main__':
 
 ![](../.gitbook/assets/left_hand.gif)
 
-今回は判別の閾値を決め打ちで設定しています。
-そのため正常に動いているように見えますが、時折変な挙動を示したり壁にぶつかったりしてしまっています。
+今回は判別の閾値を決め打ちで設定しています。 そのため正常に動いているように見えますが、時折変な挙動を示したり壁にぶつかったりしてしまっています。
 
-動作がより良くなるように判別の閾値を変更してみましょう。
-判別の閾値は主に`motion`関数のif文の値になります。
+動作がより良くなるように判別の閾値を変更してみましょう。 判別の閾値は主に`motion`関数のif文の値になります。
+
