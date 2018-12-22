@@ -189,7 +189,7 @@ gmappingはSLAMのアルゴリズムの1つで、正確に地図作成するた�
 `urg_node` を起動するための記述ですが、 `urg_node`はGazeboの起動と同時に立ち上がるため、コメントアウトしています。
 
 ```text
-<node pkg="rviz" type="rviz" name="rviz" args="-d $(find raspimouse_sim_tutorial_book_sample_program)/config/gmapping.rviz" />
+<node pkg="rviz" type="rviz" name="rviz" args="-d $(find raspimouse_sim_tutorial_program)/config/gmapping.rviz" />
 ```
 
 Rvizを起動します。 今回はgmapping用のRvizの設定\([gmapping.rviz](https://github.com/yukixx6/raspimouse_sim_tutorial_book_sample_program/blob/add_slam/config/gmapping.rviz)\)を作っておいたので、こちらを使用します。
@@ -233,7 +233,7 @@ Rvizを起動します。 今回はgmapping用のRvizの設定\([gmapping.rviz](
 
 `stt`：回転したときの回転の誤差
 
-`particles`はパーティクルの数を設定しています。この値が大きいほど正確な地図ができやすいですが、計算量が増えます。今回はデフォルトの30にしました。
+`particles`はパーティクルの数を設定しています。この値が大きいほど正確な地図ができやすいですが、計算量が増えてしまいます。今回はデフォルトの30にしました。
 
 ## SLAMを行う
 
@@ -248,6 +248,13 @@ roslaunch raspimouse_sim_tutorial_book_sample_program raspimouse_sim_gmapping.la
 ```
 
 起動したら、コントローラを使用してラズパイマウスを動かして地図を作っていきます。 初期位置にいる部屋を壁に沿って一周してみましょう。
+
+一周させたら地図を保存しましょう。下のコマンドではroomという名前で保存しています。
+
+```text
+roscd raspimouse_sim_tutorial_program/
+rosrun map_server map_saver -f map/room
+```
 
 ## 実行結果
 
