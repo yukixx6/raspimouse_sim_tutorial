@@ -68,3 +68,6 @@ Raspberry Pi Mouse SimulatorはメインボードにRaspberry Piを使った左�
 
 * [ROSのトラブルシューティング](troubleshooting.md)
 
+## 終わりに
+研究で使用するため、アンケートにご協力いただけると嬉しいです。
+[利用者アンケート](https://docs.google.com/forms/d/1MS4NzNuZ98quCpD-EPRLXg-ltk9QZ5SK46gBR9cLhfg/edit)(Google Formsに飛びます)

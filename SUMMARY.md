@@ -27,4 +27,4 @@
   * [シミュレータ上のラズパイマウスを動かす方法 Part5](tutorial/how_to_control_raspimouse_on_sim_5.md)
   * [シミュレータ上のラズパイマウスを動かす方法 Part6](tutorial/how_to_control_raspimouse_on_sim_6.md)
 * [ROSのトラブルシューティング](troubleshooting.md)
-
+* [利用者アンケート](https://docs.google.com/forms/d/1MS4NzNuZ98quCpD-EPRLXg-ltk9QZ5SK46gBR9cLhfg/edit)
