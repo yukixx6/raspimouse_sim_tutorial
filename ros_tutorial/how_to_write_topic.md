@@ -102,7 +102,7 @@ rospy.init_node('time_pub')
 pub = rospy.Publisher('UnixTime', Float64 , queue_size=1)
 ```
 
-`UnixTime`というトピック名、`Float64`というメッセージの型のパブリッシャを定義しています。
+`UnixTime`というトピック名、`Float64`というメッセージの型、`queue_size`が1のパブリッシャを定義しています。`queue_size`はバッファの数で、10 \[Hz\]周期でパブリッシュするときは1でも大丈夫です。10 \[Hz\]以上の周期でパブリッシュするときや複数のメッセージをパブリッシュするときは大きい値にするといいでしょう。
 
 ```text
 rate = rospy.Rate(10)
