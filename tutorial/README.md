@@ -1,6 +1,6 @@
 # シミュレータのチュートリアル
 
-チュートリアルはPart1〜Part6に分かれています（今後追加予定です）。
+チュートリアルはPart1〜Part6に分かれています。
 
 1. [距離センサの値の読み取り方](how_to_control_raspimouse_on_sim_1.md) 
 2. [モータを動かし方](how_to_control_raspimouse_on_sim_2.md)
