@@ -6,9 +6,11 @@
 
 Raspberry Pi MouseやROSに親しみがない人も興味を持って取り組めるような構成にしていきます。
 
+本チュートリアルは現在執筆中につき、まだ手順書のような構成にはなっていません。初めての方は[はじめに](introduction/)からお読みいただくとスムーズに読み進めていただけるかと思います。
+
 _このオンラインチュートリアルは現在執筆中です。完成版ではありません。_
 
-## Raspberry Pi Mouse Simulatorとは
+## Raspberry Pi Mouse Simulator
 
 Raspberry Pi Mouse SimulatorはメインボードにRaspberry Piを使った左右独立二輪方式の小型移動プラットフォームロボット、Raspberry Pi Mouseのシミュレータです。
 
@@ -20,13 +22,14 @@ Raspberry Pi Mouse SimulatorはメインボードにRaspberry Piを使った左�
   * [Raspberry Pi Mouse \| 製品情報 \| 株式会社ア－ルティ](https://www.rt-net.jp/products/raspimouse2/)
 * ROS wiki
   * [raspimouse\_sim - ROS Wiki](https://wiki.ros.org/raspimouse_sim)
-  * [rt-net/raspimouse\_sim - GitHub repository](https://github.com/rt-net/raspimouse_sim)
+  * [raspimouse\_ros - ROS Wiki](https://wiki.ros.org/raspimouse_sim)
+* GitHub repository
+  * [rt-net/raspimouse\_sim - GitHub](https://github.com/rt-net/raspimouse_sim)
 
 ## 目次
 
-### はじめに
-
-* [ROSとは](ros.md)
+* [はじめに](introduction/)
+* [ROSとは](introduction/ros.md)
 
 ### セットアップ
 
@@ -70,7 +73,8 @@ Raspberry Pi Mouse SimulatorはメインボードにRaspberry Piを使った左�
 
 ## 終わりに
 
-研究で使用するため、アンケートにご協力をお願い致します。 
+本チュートリアルは研究の一環で開発されています。  
+ぜひアンケートにご協力よろしくお願いします。 
 
-[利用者アンケート](https://docs.google.com/forms/d/1MS4NzNuZ98quCpD-EPRLXg-ltk9QZ5SK46gBR9cLhfg/edit)\(Google Formsに飛びます\)
+[利用者アンケート](https://docs.google.com/forms/d/1MS4NzNuZ98quCpD-EPRLXg-ltk9QZ5SK46gBR9cLhfg/edit)\(Google Forms\)
 

@@ -2,7 +2,8 @@
 
 * [Raspberry Pi Mouse Simulator's Tutorial](README.md)
 * [GitHub repository](https://github.com/rt-net/raspimouse_sim)
-* [ROSとは](ros.md)
+* [はじめに](introduction/README.md)
+  * [ROSとは](introduction/ros.md)
 * [セットアップ](setup/README.md)
   * [ROS Indigoのインストール方法\(Ubuntu Trusty\)](setup/how_to_install_ros_indigo.md)
   * [ROS Kineticのインストール方法\(Ubuntu Xenial\)](setup/how_to_install_ros_kinetic.md)
