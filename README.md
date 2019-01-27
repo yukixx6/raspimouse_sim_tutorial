@@ -71,7 +71,7 @@ Raspberry Pi Mouse SimulatorはメインボードにRaspberry Piを使った左�
 
 * [ROSのトラブルシューティング](troubleshooting.md)
 
-## 終わりに
+## 終わりに <a id="afterword"></a>
 
 本チュートリアルは研究の一環で開発されています。  
 ぜひアンケートにご協力よろしくお願いします。 
