@@ -17,7 +17,7 @@ ROSチュートリアルでは、実際にROSパッケージを作成し、独�
 
 ## ROSパッケージを作る
 
-ROSパッケージは`catkin_ws/src`の中で作成します。
+ROSパッケージは`catkin_ws/src`の中で作成するため、`catkin_ws/src`に移動しましょう。
 
 ```text
 cd ~/catkin_ws/src
@@ -39,7 +39,7 @@ std\_msgsとrospy、roscppは依存パッケージであり、以下のように
 * rospy : pythonをROSで使用するときに必要になるモジュール
 * roscpp : C++をROSで使用するときに必要になるモジュール
 
-今回は`ros_tutorial`というパッケージ名にします。
+今回は`ros_tutorial`というパッケージ名にします。以下のコマンドを実行してください。
 
 ```text
 catkin_create_pkg ros_tutorial std_msgs rospy roscpp
