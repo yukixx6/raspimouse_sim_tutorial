@@ -41,9 +41,9 @@ git clone https://github.com/yukixx6/raspimouse_sim_tutorial_program.git
 
 ### 実行方法
 
-まず、前回と同様に[Raspberry Pi Mouse Simulatorの起動](https://github.com/yukixx6/raspimouse_sim_tutorial/tree/7041ca2f8b06749c8dcadd9ac1d69bc4e7277dc4/docs/source/how_to_use_raspimouse_sim/README.md)に従い、Gazeboを起動しましょう。
+まず、前回と同様に[Raspberry Pi Mouse Simulatorの起動](https://github.com/yukixx6/raspimouse_sim_tutorial/tree/7041ca2f8b06749c8dcadd9ac1d69bc4e7277dc4/docs/source/how_to_use_raspimouse_sim/README.md)に従い、Gazeboを起動しましょう。次に[シミュレータ上のラズパイマウスを動かす方法Part2](how_to_control_raspimouse_on_sim_2.md)に従い、モータを通電させましょう。
 
-次にラズパイマウスをキーボードで動かすためには`raspimouse_sim_tutorial_program` の `scripts` ディレクトリの中にある [`raspimouse_sim_teleop.py`](https://github.com/yukixx6/raspimouse_sim_tutorial_program/blob/master/scripts/raspimouse_sim_teleop.py) を使用します。
+ラズパイマウスをキーボードで動かすためには`raspimouse_sim_tutorial_program` の `scripts` ディレクトリの中にある [`raspimouse_sim_teleop.py`](https://github.com/yukixx6/raspimouse_sim_tutorial_program/blob/master/scripts/raspimouse_sim_teleop.py) を使用します。
 
 別のターミナルで以下のコマンドを実行しましょう。
 
