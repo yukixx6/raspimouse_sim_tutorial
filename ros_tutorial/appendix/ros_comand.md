@@ -26,7 +26,9 @@
 
 ## 実行コマンド  <a id="zikkou"></a>
 
-### roscore: ROSを使用するときに使用  <a id="roscore"></a>
+### roscore: ROSで通信するときに使用  <a id="roscore"></a>
+
+roscoreはROS Master、ROS Parameter Server、rosoutログ用のnodeを立ち上げている。
 
 ```text
 roscore

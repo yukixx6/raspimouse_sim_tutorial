@@ -23,8 +23,12 @@ ROSパッケージは`catkin_ws/src`の中で作成します。
 cd ~/catkin_ws/src
 ```
 
+ではROSパッケージを作っていきましょう。
+
+まずコマンドの説明をします。
+
 ```text
-catkin_create_pkg <パッケージ名> std_msgs rospy roscpp
+<例>　catkin_create_pkg <パッケージ名> std_msgs rospy roscpp
 ```
 
 `catkin_create_pkg`はパッケージを作成するときに用いるcatkinコマンドです。
@@ -49,6 +53,4 @@ catkin_make
 ```
 
 `catkin_make`とは、`catkin_ws/src`にあるパッケージをビルドするときに使用します。 またパッケージを追加した時や、**C++**のプログラムを追加・変更したときも行います。
-
-**Python**の場合は、プログラムに対し`chmod +x <プログラム名>`を行い、一度実行権限を与えれば、変更のたびに`catkin_make`は必要ありません。
 
