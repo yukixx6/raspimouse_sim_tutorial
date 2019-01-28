@@ -15,20 +15,46 @@ Part3ではキーボードを用いてシミュレータ上のラズパイマウ
 
 ## キーボードでラズパイマウスを動かす
 
+プログラムは以下のリポジトリで公開しています。
+
+GitHub:[raspimouse\_sim\_tutorial\_program](https://github.com/yukixx6/raspimouse_sim_tutorial_program)
+
+まずフォークしてみましょう。 フォークは上記のリポジトリに飛び、ページの右上にある`Fork`のボタンを押せば出来ます。Forkすることで本家から派生して自分のリポジトリを作成することが出来ます。また自分のリポジトリとなっているので、加えた変更をコミットしておくことも出来ます。
+
+次にクローンしましょう。 まず`catkin_ws/src`に移動します。
+
+```text
+cd ~/catkin_ws/src
+```
+
+フォークした場合、クローンするときは以下のコマンドになります。
+
+```text
+git clone https://github.com/自分のGitHubのユーザー名/raspimouse_sim_tutorial_program.git
+```
+
+フォークをしていない場合、クローンする時は以下のコマンドになります。
+
+```text
+git clone https://github.com/yukixx6/raspimouse_sim_tutorial_program.git
+```
+
+### 実行方法
+
 まず、前回と同様に[Raspberry Pi Mouse Simulatorの起動](https://github.com/yukixx6/raspimouse_sim_tutorial/tree/7041ca2f8b06749c8dcadd9ac1d69bc4e7277dc4/docs/source/how_to_use_raspimouse_sim/README.md)に従い、Gazeboを起動しましょう。
 
-動かすためには`raspimouse_control` の `scripts` ディレクトリの中にある [`controller_vel_publisher.py`](https://github.com/rt-net/raspimouse_sim/blob/kinetic-devel/raspimouse_control/scripts/controller_vel_publisher.py) を使用します。
+次にラズパイマウスをキーボードで動かすためには`raspimouse_sim_tutorial_program` の `scripts` ディレクトリの中にある [`raspimouse_sim_teleop.py`](https://github.com/yukixx6/raspimouse_sim_tutorial_program/blob/master/scripts/raspimouse_sim_teleop.py) を使用します。
 
 別のターミナルで以下のコマンドを実行しましょう。
 
 ```text
-rosrun raspimouse_control controller_vel_publisher.py
+rosrun raspimouse_sim_tutorial_program raspimouse_sim_teleop.py
 ```
 
 すると次のようにキー入力待機状態になります。
 
 ```text
-w: forward, s: backward, a: left, d: right >
+w: GO, s: BACK, a: LEFT, d: RIGHT >
 ```
 
 よくあるゲームの移動方法と同じで `w` で前進、 `s` で後退、 `a` で左へ超信地旋回、 `d` で右へ超信地旋回できます。

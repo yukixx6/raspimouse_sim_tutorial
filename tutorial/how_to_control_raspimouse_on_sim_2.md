@@ -9,7 +9,7 @@
 5. [距離センサの値を利用したラズパイマウスの動かし方](how_to_control_raspimouse_on_sim_5.md)
 6. [測域センサ\(URG\)を用いたSLAMの行い方](how_to_control_raspimouse_on_sim_6.md)
 
-ラズパイマウスにはモータが2つあります。このモータに信号を送り、ロボットを動かすことができます。  
+ラズパイマウスにはステッピングモータが2つ付いています。このモータに信号を送り、ロボットを動かすことができます。ラズパイマウスのモータは400 \[Hz\]で1秒間につき1回転します。  
 Part2ではモータの動かし方について取り扱います。
 
 まず、Part1と同様に[Raspberry Pi Mouse Simulatorの動作確認](../setup/how_to_use_raspimouse_sim.md)に従い、Gazeboを起動します。
@@ -36,6 +36,8 @@ echo 1 > /dev/rtmotoren0
 ![](../.gitbook/assets/echo_rtmotoren0.png)
 
 ## ラズパイマウスを動かす
+
+実際のラズパイマウスは
 
 ROSを介さずシミュレータ上のラズパイマウスを動かすことができます。
 

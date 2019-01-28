@@ -15,30 +15,6 @@
 
 このPart5では左手法という迷路の解析手法を利用して、ラズパイマウスをスタート地点からゴールまで動かしてみようと思います。
 
-プログラムは以下のリポジトリで公開しています。
-
-GitHub:[raspimouse\_sim\_tutorial\_program](https://github.com/yukixx6/raspimouse_sim_tutorial_program)
-
-まずフォークしてみましょう。 フォークは上記のリポジトリに飛び、ページの右上にある`Fork`のボタンを押せば出来ます。Forkすることで本家から派生して自分のリポジトリを作成することが出来ます。また自分のリポジトリとなっているので、加えた変更をコミットしておくことも出来ます。
-
-次にクローンしましょう。 まず`catkin_ws/src`に移動します。
-
-```text
-cd ~/catkin_ws/src
-```
-
-フォークした場合、クローンするときは以下のコマンドになります。
-
-```text
-git clone https://github.com/自分のGitHubのユーザー名/raspimouse_sim_tutorial_program.git
-```
-
-フォークをしていない場合、クローンする時は以下のコマンドになります。
-
-```text
-git clone https://github.com/yukixx6/raspimouse_sim_tutorial_program.git
-```
-
 ## 左手法について
 
 左手法とは、優先的に左側を向き進み、常に左側の壁に沿って動くことでゴールを目指す手法のことです。 マイクロマウス競技などでも使用されています。
@@ -52,7 +28,9 @@ git clone https://github.com/yukixx6/raspimouse_sim_tutorial_program.git
 
 ## サンプルプログラム
 
-今回もPythonで書きます。 名前は`left_hand.py`とします。
+動かすためには[`raspimouse_sim_tutorial_program`](https://github.com/yukixx6/raspimouse_sim_tutorial_program) の `scripts` ディレクトリの中にある [`left_hand.py`](https://github.com/yukixx6/raspimouse_sim_tutorial_program/blob/master/scripts/left_hand.py) を使用します。
+
+プログラムは以下のようになっています。
 
 ```text
 #!/usr/bin/env python
