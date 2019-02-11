@@ -54,19 +54,9 @@ roscd ros_tutorial/
 vim package.xml
 ```
 
-35行目の`<build_depend>message_generation</build_depend>`と、39行目の`<run_depend>message_runtime</run_depend>`のコメントアウトを外します。
+40行目の`<build_depend>message_generation</build_depend>`と、46行目の`<exec_depend>message_runtime</exec_depend>`のコメントアウトを外します。
 
-```text
- 35      <build_depend>message_generation</build_depend> 
- 36   <!-- Use buildtool_depend for build tool packages: -->
- 37   <!--   <buildtool_depend>catkin</buildtool_depend> -->
- 38   <!-- Use run_depend for packages you need at runtime: -->
- 39    <run_depend>message_runtime</run_depend>    
- 40   <!-- Use test_depend for packages you need only for testing: -->
- 41   <!--   <test_depend>gtest</test_depend> -->
- 42   <buildtool_depend>catkin</buildtool_depend>
- 43   <build_depend>roscpp</build_depend>
-```
+![](../.gitbook/assets/msg_package1.png)
 
 #### 次に`CMakeLists.txt`を編集します。
 
@@ -74,45 +64,21 @@ vim package.xml
 vim CMakeLists.txt
 ```
 
-10行目の`find_package`に`message_generation`を追加します。
+10行目の`find_package`に、14行目ように`message_generation`を追加します。
 
-```text
-10 find_package(catkin REQUIRED COMPONENTS
-11   roscpp
-12   rospy
-13   std_msgs
-14   message_generation
-15 )
-```
+![](../.gitbook/assets/msg_Cmake1.png)
 
-51行目の`add_message_files`のコメントアウトを外し、`Date.msg`を追加する。
+51行目の`add_message_files`のコメントアウトを外し、53行目に`Date.msg`を追加する。
 
-```text
-51 add_message_files(                                                          
-52   FILES
-53   Date.msg
-54 )
-```
+![](../.gitbook/assets/msg_Cmake2.png)
 
-71行目の`generate_massages`のコメントアウトを外します。
+71行目から74行目の`generate_massages`のコメントアウトを外します。
 
-```text
-71 generate_messages(
-72   DEPENDENCIES
-73   std_msgs
-74 )
-```
+![](../.gitbook/assets/msg_Cmake3.png)
 
 108行目の`catkin_package`の`CATKIN_DEPENDS`のコメントアウトを外し、`message_runtime`を追加します。
 
-```text
-105 catkin_package(
-106 #  INCLUDE_DIRS include
-107 #  LIBRARIES tutorial_pkg
-108   CATKIN_DEPENDS roscpp rospy std_msgs message_runtime
-109 #  DEPENDS system_lib
-110 )
-```
+![](../.gitbook/assets/msg_Cmake4.png)
 
 `catkin_ws`に移動し`catkin_make`を行います。
 
