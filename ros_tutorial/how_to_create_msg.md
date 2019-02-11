@@ -188,7 +188,7 @@ if __name__ == '__main__':
 実行権限を与えます。
 
 ```text
-chmod +x time_pub2.py
+chmod +x scripts/time_pub2.py
 ```
 
 ### コード解説
