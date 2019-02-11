@@ -69,7 +69,7 @@ while not rospy.is_shutdown():
 書いたプログラムには以下のコマンドを実行してください。
 
 ```text
-chmod +x scritps/time_pub.py
+chmod +x scripts/time_pub.py
 ```
 
 これはプログラムに実行権限を与えています。
