@@ -6,7 +6,7 @@
 2. [トピックの書き方](how_to_write_topic.md)
 3. [独自のメッセージファイルの作り方](how_to_create_msg.md) ←今ここ
 4. [まとめて起動するやり方](how_to_use_launch.md)
-5. [サービスを書き方](how_to_write_service.md)
+5. [サービスの書き方](how_to_write_service.md)
 6. [独自のサービスファイルの作り方](how_to_create_srv.md)
 
 ## はじめに
@@ -66,19 +66,19 @@ vim CMakeLists.txt
 
 10行目の`find_package`に、14行目ように`message_generation`を追加します。
 
-![](../.gitbook/assets/msg_Cmake1.png)
+![](../.gitbook/assets/msg_cmake1.png)
 
 51行目の`add_message_files`のコメントアウトを外し、53行目に`Date.msg`を追加する。
 
-![](../.gitbook/assets/msg_Cmake2.png)
+![](../.gitbook/assets/msg_cmake2.png)
 
 71行目から74行目の`generate_massages`のコメントアウトを外します。
 
-![](../.gitbook/assets/msg_Cmake3.png)
+![](../.gitbook/assets/msg_cmake3.png)
 
 108行目の`catkin_package`の`CATKIN_DEPENDS`のコメントアウトを外し、`message_runtime`を追加します。
 
-![](../.gitbook/assets/msg_Cmake4.png)
+![](../.gitbook/assets/msg_cmake4.png)
 
 `catkin_ws`に移動し`catkin_make`を行います。
 
@@ -166,7 +166,7 @@ from ros_tutorial.msg import Date
 from datetime import datetime
 ```
 
-新たに、先程作成した`Date`をインポートしています。また現在日時を取得するために必要なモジュール`datetime`もインポートしています。 
+新たに、先程作成した`Date`をインポートしています。また現在日時を取得するために必要なモジュール`datetime`もインポートしています。
 
 ```text
 def talker():
