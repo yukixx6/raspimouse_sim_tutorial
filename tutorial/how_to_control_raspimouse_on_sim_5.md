@@ -209,13 +209,14 @@ roslaunch raspimouse_gazebo raspimouse_with_samplemaze.launch
 次にモータを通電させましょう
 
 ```text
+roslaunch raspimouse_ros_2 raspimouse.launch
 rosservice call /motor_on
 ```
 
-今回書いた`left_hand.py`を実行しましょう。
+今回書いた`left_hand.py`を実行しましょう。
 
 ```text
-rosrun raspimouse_sim_tutorial left_hand.py
+rosrun raspimouse_sim_tutorial_program left_hand.py
 ```
 
 ## 実行結果
