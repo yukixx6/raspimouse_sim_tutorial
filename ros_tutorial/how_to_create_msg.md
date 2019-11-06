@@ -118,7 +118,10 @@ roscd ros_tutorial
 vim scripts/time_pub2.py
 ```
 
+{% code-tabs %}
+{% code-tabs-item title="time\_pub2.py" %}
 ```text
+
 #!/usr/bin/env python                                                           
 import rospy
 from ros_tutorial.msg import Date    
@@ -150,6 +153,8 @@ if __name__ == '__main__':
     talker()
     rospy.spin()
 ```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
 
 実行権限を与えます。
 
@@ -229,6 +234,16 @@ for文で配列の0~10番目を日付として`date`に渡しています。同�
 サブスクライバはほとんど変わらないため、`time_sub.py`をコピーし、`time_sub2.py`という名前で保存しましょう。
 
 ```text
+cp scripts/time_sub.py scripts/time_sub2.py
+vim scripts/time_sub2.py
+```
+
+3行目と6行目、10行目に変更を加えます。
+
+{% code-tabs %}
+{% code-tabs-item title="time\_sub2.py" %}
+```text
+
 #!/usr/bin/env python
 import rospy
 from ros_tutorial.msg import Date  #changed
@@ -241,6 +256,8 @@ if __name__ == "__main__":
     sub = rospy.Subscriber('Date_and_Time', Date , callback)  #changed
     rospy.spin()
 ```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
 
 ```text
 chmod +x scripts/time_sub2.py

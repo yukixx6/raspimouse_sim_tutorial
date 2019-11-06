@@ -32,12 +32,17 @@ ROSの通信方式は主に**トピック、サービス、アクション**の3
 
 それではパブリッシャとサブスクライバを書いていきましょう。
 
-まず[ROSパッケージの作り方](how_to_create_pkg.md)で作成した`ros_tutorial`に移動します。
+まず[ROSパッケージの作り方](how_to_create_pkg.md)で作成した`ros_tutorial`に移動します。ディレクトリ移動には`roscd`という便利なコマンドがあります。このコマンドはどこからでも指定のパッケージに移動できます。
+
+詳しくは[よく使用するROSコマンドのroscd](appendix/ros_comand.md#roscd)を御覧ください。
+
+```text
+roscd ros_tutorial
+```
 
 Pythonのプログラムはscriptsディレクトリの中で作成します。 scriptsディレクトリが無い場合は作成しましょう。
 
 ```text
-roscd ros_tutorial
 mkdir scripts
 ```
 

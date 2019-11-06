@@ -51,6 +51,8 @@ roscd ros_tutorial/
 vim scripts/server.py
 ```
 
+{% code-tabs %}
+{% code-tabs-item title="server.py" %}
 ```text
 #!/usr/bin/env python                                                           
 import rospy
@@ -58,19 +60,23 @@ from std_srvs.srv import SetBool, SetBoolResponse
 
 def callback_srv(data):
     resp = SetBoolResponse()
-    resp.success = data.data
     if data.data == True:
         resp.message = "called"
+        resp.success = True
     else:
         resp.message = "ready"
+        resp.success = False
     print(resp.message)
     return resp
 
 if __name__ == "__main__":
     rospy.init_node("srv_server")
     srv = rospy.Service('service_call', SetBool, callback_srv)
+    print("ready")
     rospy.spin()
 ```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
 
 実行権限を与えます。
 
@@ -104,13 +110,19 @@ if __name__ == "__main__":
 `srv_server`というノードの名前にしています。
 
 ```text
-    srv = rospy.Service('service_call', SetBool, callback_srv)
+      srv = rospy.Service('service_call', SetBool, callback_srv)
 ```
 
 ここでサービスをインスタンスしています。`service_call`がサービス名、`SetBool`がサービスの型、`callback_srv`がサービスの引数を返すコールバック関数名になります。
 
 ```text
-    rospy.spin()
+      print("ready")
+```
+
+一番最初は`ready`と表示させておきます。
+
+```text
+      rospy.spin()
 ```
 
 プログラムを終了させないようにしています。
@@ -130,19 +142,17 @@ resp = SetBoolResponse()
 `SetBoolResponse`を`resp`という名前でインスタンス化しています。
 
 ```text
-    resp.success = data.data
-```
-
-サービスファイルの出力の`success`に入力の`data`を入れています。 両方共同じbool型のため、そのまま与えています。
-
-```text
     if data.data == True:
         resp.message = "called"
+        resp.success = True
     else:
         resp.message = "ready"
+        resp.success = False
 ```
 
-Trueが入力された場合called、Falseが入力された場合readyを`message`に書き込んでいます。
+Trueが入力された場合、つまり呼び出しがあった時、`message`にcalledを書き込み、呼び出されたことを伝えるため`success`にTrueを書き込んでいます。
+
+それ以外の場合やFalseが入力された場合は、`message`にreadyを書き込み、呼び出されていないことを伝えるため`success`にFalseを書き込んでいます。
 
 ```text
     print(resp.message)
@@ -164,6 +174,8 @@ roscd ros_tutorial/
 vim scripts/client.py
 ```
 
+{% code-tabs %}
+{% code-tabs-item title="client.py" %}
 ```text
 #!/usr/bin/env python
 import rospy
@@ -177,6 +189,8 @@ if __name__ == "__main__":
     except rospy.ServiceException, e:
         print ("Service call failed: %s" % e)
 ```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
 
 実行権限を与えます。
 

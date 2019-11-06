@@ -50,7 +50,7 @@ roscd ros_tutorial/
 vim CMakeLists.txt
 ```
 
-57行目の`add_service_files`のコメントアウトを外し、`DateTrigger.srv`を追加します。
+57行目からの`add_service_files`のコメントアウトを外し、59行目に`DateTrigger.srv`を追加します。
 
 ```text
  56 ## Generate services in the 'srv' folder
@@ -86,22 +86,35 @@ float64 time
 
 ## プログラムを改良
 
+まず`ros_tutorial`パッケージに移動します。
+
+```text
+roscd ros_tutorial
+```
+
 `time_pub2.py`をコピーして`date_server.py`という名前で保存しましょう。
+
+```text
+cp scripts/time_pub2.py scripts/date_server.py
+vim scripts/date_server.py
+```
 
 プログラムを以下のように改良します。
 
+{% code-tabs %}
+{% code-tabs-item title="date\_server.py" %}
 ```text
 #!/usr/bin/env python                                                           
 import rospy
 from ros_tutorial.srv import DateTrigger, DateTriggerResponse
 from datetime import datetime
 
-def callback_srv(data):  #changed
+def callback_srv(data):                                          #changed
     l = []
     d = DateTriggerResponse()                                                    
-    d.date = ''
+    d.date = ''                                                  #9~12 changed
     d.time = ''
-    try:
+    try:                                                         #add
         now = datetime.now()
         l = str(now)
 
@@ -111,17 +124,19 @@ def callback_srv(data):  #changed
             d.time += l[i]
         d.date = int(d.date.replace('-', ''))
         d.time = float(d.time.replace(':',''))
-        d.success = True
+        d.success = True                                        #22~26 changed
         return d
     except:
         d.success = False
         return d
 
 if __name__ == '__main__':
-    rospy.init_node('date_server')
-    srv = rospy.Service('date_call', DateTrigger, callback_srv)
+    rospy.init_node('date_server')                              #changed
+    srv = rospy.Service('date_call', DateTrigger, callback_srv) #changed
     rospy.spin()
 ```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
 
 実行権限を与えます。
 
