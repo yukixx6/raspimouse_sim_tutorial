@@ -52,13 +52,7 @@ vim CMakeLists.txt
 
 57行目からの`add_service_files`のコメントアウトを外し、59行目に`DateTrigger.srv`を追加します。
 
-```text
- 56 ## Generate services in the 'srv' folder
- 57  add_service_files(
- 58    FILES
- 59    DateTrigger.srv                                                             
- 60  )
-```
+![](../.gitbook/assets/srv_Cmake.png)
 
 `catkin_ws`に移動し、`catkin_make`を行います。
 
