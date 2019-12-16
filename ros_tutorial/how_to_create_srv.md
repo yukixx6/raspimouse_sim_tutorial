@@ -97,8 +97,6 @@ vim scripts/date_server.py
 
 プログラムを以下のように改良します。
 
-{% tabs %}
-{% tab title="" %}
 {% code title="date\_server.py" %}
 ```python
 #!/usr/bin/env python                                                           
@@ -132,8 +130,6 @@ if __name__ == '__main__':
     rospy.spin()
 ```
 {% endcode %}
-{% endtab %}
-{% endtabs %}
 
 実行権限を与えます。
 
@@ -197,8 +193,6 @@ d = DateTriggereResponse()
 vim scripts/date_client.py
 ```
 
-{% tabs %}
-{% tab title="" %}
 {% code title="date\_client.py" %}
 ```python
 #!/usr/bin/env python                                                           
@@ -230,8 +224,6 @@ if __name__ == '__main__':
         rate.sleep()
 ```
 {% endcode %}
-{% endtab %}
-{% endtabs %}
 
 実行権限を与えます。
 
