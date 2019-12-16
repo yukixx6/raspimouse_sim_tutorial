@@ -52,7 +52,7 @@ vim CMakeLists.txt
 
 57行目からの`add_service_files`のコメントアウトを外し、59行目に`DateTrigger.srv`を追加します。
 
-![](../.gitbook/assets/srv_Cmake.png)
+![](../.gitbook/assets/srv_cmake.png)
 
 `catkin_ws`に移動し、`catkin_make`を行います。
 
@@ -97,9 +97,10 @@ vim scripts/date_server.py
 
 プログラムを以下のように改良します。
 
-{% code-tabs %}
-{% code-tabs-item title="date\_server.py" %}
-```text
+{% tabs %}
+{% tab title="" %}
+{% code title="date\_server.py" %}
+```python
 #!/usr/bin/env python                                                           
 import rospy
 from ros_tutorial.srv import DateTrigger, DateTriggerResponse
@@ -130,8 +131,9 @@ if __name__ == '__main__':
     srv = rospy.Service('date_call', DateTrigger, callback_srv) #changed
     rospy.spin()
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
+{% endtab %}
+{% endtabs %}
 
 実行権限を与えます。
 
@@ -191,14 +193,45 @@ d = DateTriggereResponse()
 
 `date_client.py`という名前で作成しましょう。
 
-```
+```text
 vim scripts/date_client.py
 ```
 
+{% tabs %}
+{% tab title="" %}
+{% code title="date\_client.py" %}
+```python
+#!/usr/bin/env python                                                           
+import rospy
+from ros_tutorial.srv import DateTrigger
+
+class Client():
+    def __init__(self):
+        self.call = rospy.ServiceProxy('date_call', DateTrigger)
+        self.res = ""
+
+    def call(self):
+        for i in  range(11):
+            print(i)
+            rospy.sleep(0.1)
+        self.res = self.call()
+        print("~~~~~~~~~~~~~~~~~~~~~~")
+        print(self.res)
+        print("~~~~~~~~~~~~~~~~~~~~~~")
+        rospy.sleep(1)
+
+if __name__ == '__main__':
+    rospy.init_node("date_client")
+    rospy.wait_for_service("date_call")
+    c = Client()
+    rate = rospy.Rate(10)
+    while not rospy.is_shutdown():
+        c.call()
+        rate.sleep()
 ```
-#!/usr/bin/env python                                                           import rospyfrom ros_tutorial.srv import DateTriggerclass Client():    def __init__(self):        self.call = rospy.ServiceProxy('date_call', DateTrigger)        self.res = ""    def call(self):        for i in  range(11):            print(i)            rospy.sleep(0.1)        self.res = self.call()        print("~~~~~~~~~~~~~~~~~~~~~~")        print(self.res)        print("~~~~~~~~~~~~~~~~~~~~~~")        rospy.sleep(1)if __name__ == '__main__':    rospy.init_node("date_client")    rospy.wait_for_service("date_call")    c = Client()
-    rate = rospy.Rate(10)    while not rospy.is_shutdown():        c.call()        rate.sleep()
-```
+{% endcode %}
+{% endtab %}
+{% endtabs %}
 
 実行権限を与えます。
 
@@ -210,17 +243,29 @@ chmod +x scripts/date_client.py
 
 まずClientクラスから説明していきます。
 
-```    def __init__(self):        self.call = rospy.ServiceProxy('date_call', DateTrigger)        self.res = ""
+```text
+    def __init__(self):
+        self.call = rospy.ServiceProxy('date_call', DateTrigger)
+        self.res = ""
 ```
 
-`__init__`関数では今回呼び出すサービスの`date_call`を`self.call`という名前で宣言しています。
-`self.res`は`self.call`で呼び出したサービスのレスポンスを受け取るための変数です。
-```    def call(self):        for i in  range(11):            print(i)            rospy.sleep(0.1)        self.res = self.call()        print("~~~~~~~~~~~~~~~~~~~~~~")        print(self.res)        print("~~~~~~~~~~~~~~~~~~~~~~")        rospy.sleep(1)
+`__init__`関数では今回呼び出すサービスの`date_call`を`self.call`という名前で宣言しています。 `self.res`は`self.call`で呼び出したサービスのレスポンスを受け取るための変数です。
+
+```text
+    def call(self):
+        for i in  range(11):
+            print(i)
+            rospy.sleep(0.1)
+        self.res = self.call()
+        print("~~~~~~~~~~~~~~~~~~~~~~")
+        print(self.res)
+        print("~~~~~~~~~~~~~~~~~~~~~~")
+        rospy.sleep(1)
 ```
 
 `date_call`関数では10カウントした後、`self.res = self.call()`で結果を受け取り表示させています。
 
-```
+```text
 if __name__ == '__main__':
     rospy.init_node("date_client")
     rospy.wait_for_service("date_call")
@@ -228,7 +273,7 @@ if __name__ == '__main__':
 
 `date_client`というノード名で宣言し、`date_call`が立ち上がるのを待っています。
 
-```
+```text
     c = Client()
     rate = rospy.Rate(10)
     while not rospy.is_shutdown():
@@ -259,9 +304,22 @@ rosrun ros_tutorial date_client.py
 `date_client.py`を実行したターミナルで以下のように表示されたら正しく実行できています。
 
 ```text
-012345678910~~~~~~~~~~~~~~~~~~~~~~success: True
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+~~~~~~~~~~~~~~~~~~~~~~
+success: True
 date: 20181114
-time: 123304.60767~~~~~~~~~~~~~~~~~~~~~~
+time: 123304.60767
+~~~~~~~~~~~~~~~~~~~~~~
 ```
 
 2018年11月14日の12時33分4.60767秒を指しています。

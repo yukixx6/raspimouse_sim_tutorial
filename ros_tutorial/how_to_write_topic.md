@@ -56,7 +56,8 @@ mkdir scripts
 vim scripts/time_pub.py
 ```
 
-```text
+{% code title="time\_pub.py" %}
+```python
 #!/usr/bin/env python
 import rospy
 from std_msgs.msg import Float64
@@ -70,6 +71,7 @@ while not rospy.is_shutdown():
     pub.publish(now)
     rate.sleep()
 ```
+{% endcode %}
 
 書いたプログラムには以下のコマンドを実行してください。
 
@@ -137,7 +139,8 @@ while not rospy.is_shutdown():
 vim scripts/time_sub.py
 ```
 
-```text
+{% code title="time\_sub.py" %}
+```python
 #!/usr/bin/env python
 import rospy
 from std_msgs.msg import Float64
@@ -150,6 +153,7 @@ if __name__ == "__main__":
     sub = rospy.Subscriber('UnixTime', Float64 , callback)
     rospy.spin()
 ```
+{% endcode %}
 
 パブリッシャと同様に以下のコマンドを実行してください。
 

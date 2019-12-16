@@ -10,8 +10,7 @@ ROSチュートリアルはPart1〜Part6に分かれています（今後追加�
 4. [まとめて起動するやり方](how_to_use_launch.md)
 5. [サービスの書き方](how_to_write_service.md)
 6. [独自のサービスファイルの作り方](how_to_create_srv.md)
-
-* [付録](appendix/)
-  * [ROSでよく使用する用語](appendix/ros_word.md)
-  * [よく使用するROSコマンド](appendix/ros_comand.md)
+7. [付録](appendix/)
+   * [ROSでよく使用する用語](appendix/ros_word.md)
+   * [よく使用するROSコマンド](appendix/ros_comand.md)
 

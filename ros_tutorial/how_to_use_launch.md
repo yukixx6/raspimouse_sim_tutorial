@@ -36,12 +36,14 @@ mkdir launch
 vim launch/date.launch
 ```
 
+{% code title="date.launch" %}
 ```text
 <launch>
     <node pkg="ros_tutorial" name="time_pub" type="time_pub2.py" />
     <node pkg="ros_tutorial" name="time_sub" type="time_sub2.py" />
 </launch>
 ```
+{% endcode %}
 
 ### コード解説
 

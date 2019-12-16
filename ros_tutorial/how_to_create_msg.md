@@ -118,10 +118,8 @@ roscd ros_tutorial
 vim scripts/time_pub2.py
 ```
 
-{% code-tabs %}
-{% code-tabs-item title="time\_pub2.py" %}
-```text
-
+{% code title="time\_pub2.py" %}
+```python
 #!/usr/bin/env python                                                           
 import rospy
 from ros_tutorial.msg import Date    
@@ -153,8 +151,7 @@ if __name__ == '__main__':
     talker()
     rospy.spin()
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 実行権限を与えます。
 
@@ -240,9 +237,8 @@ vim scripts/time_sub2.py
 
 3行目と6行目、10行目に変更を加えます。
 
-{% code-tabs %}
-{% code-tabs-item title="time\_sub2.py" %}
-```text
+{% code title="time\_sub2.py" %}
+```python
 
 #!/usr/bin/env python
 import rospy
@@ -256,8 +252,7 @@ if __name__ == "__main__":
     sub = rospy.Subscriber('Date_and_Time', Date , callback)  #changed
     rospy.spin()
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 ```text
 chmod +x scripts/time_sub2.py

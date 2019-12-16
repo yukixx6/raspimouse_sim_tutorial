@@ -51,9 +51,8 @@ roscd ros_tutorial/
 vim scripts/server.py
 ```
 
-{% code-tabs %}
-{% code-tabs-item title="server.py" %}
-```text
+{% code title="server.py" %}
+```python
 #!/usr/bin/env python                                                           
 import rospy
 from std_srvs.srv import SetBool, SetBoolResponse
@@ -75,8 +74,7 @@ if __name__ == "__main__":
     print("ready")
     rospy.spin()
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 実行権限を与えます。
 
@@ -174,9 +172,8 @@ roscd ros_tutorial/
 vim scripts/client.py
 ```
 
-{% code-tabs %}
-{% code-tabs-item title="client.py" %}
-```text
+{% code title="client.py" %}
+```python
 #!/usr/bin/env python
 import rospy
 from std_srvs.srv import SetBool
@@ -189,8 +186,7 @@ if __name__ == "__main__":
     except rospy.ServiceException, e:
         print ("Service call failed: %s" % e)
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 実行権限を与えます。
 
