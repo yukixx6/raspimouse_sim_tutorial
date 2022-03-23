@@ -21,7 +21,7 @@ rosrun raspimouse_control gen_dev_file.sh
 次に、同じ1枚目のウィンドウでシミュレータを起動します。
 
 ```text
-roslaunch raspimouse_gazebo raspimouse_with_samplemaze.launch
+roslaunch raspimouse_gazebo raspimouse_with_samplemaze.launch use_devfile:=true
 ```
 
 ![](../.gitbook/assets/roslaunch_raspimouse_with_samplemaze.png)

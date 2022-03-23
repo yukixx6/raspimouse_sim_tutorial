@@ -8,7 +8,7 @@ Raspberry Pi MouseやROSに親しみがない人も興味を持って取り組�
 
 本チュートリアルは現在執筆中につき、まだ手順書のような構成にはなっていません。初めての方は[はじめに](introduction/)からお読みいただくとスムーズに読み進めていただけるかと思います。
 
-_このオンラインチュートリアルは現在執筆中です。完成版ではありません。_
+このオンラインチュートリアルは千葉工業大学上田研究室にて研究の一環で開発されたものです。株式会社アールティによって提供されるものではありません。
 
 ## Raspberry Pi Mouse Simulator
 
@@ -73,7 +73,7 @@ Raspberry Pi Mouse SimulatorはメインボードにRaspberry Piを使った左�
 
 ## 終わりに <a id="afterword"></a>
 
-本チュートリアルは研究の一環で開発されています。  
+本チュートリアルは千葉工業大学上田研究室にて研究の一環で開発されました。  
 ぜひアンケートにご協力よろしくお願いします。 
 
 [利用者アンケート](https://docs.google.com/forms/d/1MS4NzNuZ98quCpD-EPRLXg-ltk9QZ5SK46gBR9cLhfg/edit)\(Google Forms\)
