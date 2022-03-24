@@ -13,7 +13,7 @@
 まず、1枚目のウィンドウでシミュレータ用のデバイスファイルを作成します。次のコマンドを入力します（管理者権限が必要です）。
 
 ```bash
-rosrun raspimouse_control gen_dev_file.sh
+rosrun raspimouse_fake gen_dev_file.sh
 ```
 
 ![](../.gitbook/assets/rosrun_gen_dev_file.png)
